@@ -11,6 +11,8 @@
 #import "TEALBlocks.h"
 #import "TEALProfileHelpers.h"
 
+#import "TEALProfileDelegate.h"
+
 @class TEALURLSessionManager;
 
 @interface TEALProfileStore : NSObject
@@ -19,6 +21,8 @@
 
 @property (readonly, nonatomic) NSURL *profileURL;
 @property (readonly, nonatomic) NSURL *profileDefinitionURL;
+
+@property (weak, nonatomic) id<TEALProfileDelegate> profileDelegate;
 
 - (instancetype) initWithURLSessionManager:(TEALURLSessionManager *)urlSessionManager
                                 profileURL:(NSURL *)profileURL

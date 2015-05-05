@@ -84,6 +84,8 @@
         return;
     }
     
+    __weak TEALProfileStore *weakSelf = self;
+    
     [self.urlSessionManager performRequest:request
                      withJSONCompletion:^(NSHTTPURLResponse *response, NSDictionary *data, NSError *connectionError) {
 
@@ -91,9 +93,13 @@
                              
                              TEAL_LogVerbose(@"Profile Fetch Failed with response: %@, error: %@", response, [connectionError localizedDescription]);
                          }
-                         [self.currentProfile storeRawProfile:data];
+                         
+                         TEALProfile *profile = weakSelf.currentProfile;
+                         
+                         [weakSelf updateProfile:profile
+                                      fromSource:data];
 
-                         completion( self.currentProfile, connectionError);
+                         completion( weakSelf.currentProfile, connectionError);
                      }];
 }
 
@@ -133,6 +139,186 @@
                          }
                          completion( data, connectionError);
                      }];
+}
+
+
+- (void) updateProfile:(TEALProfile *)profile
+            fromSource:(NSDictionary *)source {
+    
+    profile.rawProfile = source;
+    
+    [self updateProfileAttributes:profile
+                       fromSource:source];
+
+    [self updateProfileCurrentVisit:profile
+                         fromSource:source];
+}
+
+#pragma mark - Attributes
+
+- (void) updateProfileAttributes:(TEALProfile *)profile
+                      fromSource:(NSDictionary *)source {
+    
+    [self updateProfileAudiences:profile
+                      fromSource:source];
+    
+    [self updateProfileBadges:profile
+                   fromSource:source];
+
+    [self updateProfileDates:profile
+                  fromSource:source];
+    
+    [self updateProfileFlags:profile
+                  fromSource:source];
+    
+    [self updateProfileMetrics:profile
+                    fromSource:source];
+
+    [self updateProfileProperties:profile
+                       fromSource:source];
+}
+
+- (void) updateProfileAudiences:(TEALProfile *)profile
+                     fromSource:(NSDictionary *)source {
+    
+    NSArray *audiences = [TEALProfileHelpers arrayOfAudiencesFromSource:source];
+    
+    // TODO notify delegates
+
+    profile.audiences = audiences;
+}
+
+- (void) updateProfileBadges:(TEALProfile *)profile
+                  fromSource:(NSDictionary *)source {
+    
+    NSArray *badges = [TEALProfileHelpers arrayOfBadgesFromSource:source];
+    
+    // TODO notify delegates
+
+    profile.badges = badges;
+}
+
+- (void) updateProfileDates:(TEALProfile *)profile
+                 fromSource:(NSDictionary *)source {
+    
+    NSArray *dates = [TEALProfileHelpers arrayOfDatesFromSource:source];
+    
+    // TODO notify delegates
+
+    profile.dates = dates;
+}
+
+- (void) updateProfileFlags:(TEALProfile *)profile
+                 fromSource:(NSDictionary *)source {
+    
+    NSArray *flags = [TEALProfileHelpers arrayOfFlagsFromSource:source];
+    
+    // TODO notify delegates
+
+    profile.flags = flags;
+}
+
+- (void) updateProfileMetrics:(TEALProfile *)profile
+                   fromSource:(NSDictionary *)source {
+    
+    NSArray *metrics = [TEALProfileHelpers arrayOfMetricsFromSource:source];
+    
+    // TODO notify delegates
+
+    profile.metrics = metrics;
+}
+
+- (void) updateProfileProperties:(TEALProfile *)profile
+                      fromSource:(NSDictionary *)source {
+    
+    NSArray *properties = [TEALProfileHelpers arrayOfPropertiesFromSource:source];
+
+    // TODO notify delegates
+
+    profile.properties = properties;
+}
+
+
+#pragma mark - Current Visit
+
+- (void) updateProfileCurrentVisit:(TEALProfile *)profile fromSource:(NSDictionary *)source {
+    
+    NSDictionary *sourceVisit = source[@"current_visit"];
+    
+    if (!sourceVisit) {
+        return;
+    }
+    
+    TEALProfileCurrentVisit *visit = [TEALProfileCurrentVisit new];
+    
+    
+    visit.totalEventCount = [source[@"total_event_count"] integerValue];
+    visit.creationTimestamp = [source[@"creation_ts"] doubleValue];
+    
+    [self updateCurrentVisitAttributes:visit
+                            fromSource:source];
+    
+    // TODO notify delegates
+    
+    profile.currentVisit = visit;
+}
+
+#pragma mark - Current Visit Attributes
+
+- (void) updateCurrentVisitAttributes:(TEALProfileCurrentVisit *)visit
+                           fromSource:(NSDictionary *)source {
+
+    [self updateCurrentVisitDates:visit
+                       fromSource:source];
+    
+    [self updateCurrentVisitFlags:visit
+                       fromSource:source];
+    
+    [self updateCurrentVisitMetrics:visit
+                         fromSource:source];
+
+    [self updateCurrentVisitProperties:visit
+                            fromSource:source];
+}
+
+- (void) updateCurrentVisitDates:(TEALProfileCurrentVisit *)visit
+                      fromSource:(NSDictionary *)source {
+    
+    NSArray *dates = [TEALProfileHelpers arrayOfDatesFromSource:source];
+    
+    // TODO notify delegates
+
+    visit.dates = dates;
+}
+
+- (void) updateCurrentVisitFlags:(TEALProfileCurrentVisit *)visit
+                      fromSource:(NSDictionary *)source {
+    
+    NSArray *flags = [TEALProfileHelpers arrayOfFlagsFromSource:source];
+
+    // TODO notify delegates
+
+    visit.flags = flags;
+}
+
+- (void) updateCurrentVisitMetrics:(TEALProfileCurrentVisit *)visit
+                        fromSource:(NSDictionary *)source {
+    
+    NSArray *metrics = [TEALProfileHelpers arrayOfMetricsFromSource:source];
+
+    // TODO notify delegates
+
+    visit.metrics = metrics;
+}
+
+- (void) updateCurrentVisitProperties:(TEALProfileCurrentVisit *)visit
+                           fromSource:(NSDictionary *)source {
+    
+    NSArray *properties = [TEALProfileHelpers arrayOfPropertiesFromSource:source];
+
+    // TODO notify delegates
+
+    visit.properties = properties;
 }
 
 

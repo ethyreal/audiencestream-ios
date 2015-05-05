@@ -11,12 +11,32 @@
 
 @interface TEALProfile (PrivateHeader)
 
-- (void) storeRawProfile:(NSDictionary *)rawProfile;
+@property (copy, readwrite) NSString *visitorID;
+
+@property (readwrite, nonatomic) NSDictionary *rawProfile;
+
+@property (readwrite, nonatomic) NSArray *audiences;
+@property (readwrite, nonatomic) NSArray *badges;
+@property (readwrite, nonatomic) NSArray *dates;
+@property (readwrite, nonatomic) NSArray *flags;
+@property (readwrite, nonatomic) NSArray *metrics;
+@property (readwrite, nonatomic) NSArray *properties;
+
+@property (readwrite, nonatomic) TEALProfileCurrentVisit *currentVisit;
 
 @end
 
 @interface TEALProfileCurrentVisit (PrivateHeader)
 
 - (void) storeRawCurrentVisit:(NSDictionary *)rawProfile;
+
+@property (readwrite) NSTimeInterval creationTimestamp;
+
+@property (readwrite, nonatomic) NSArray *dates;
+@property (readwrite, nonatomic) NSArray *flags;
+@property (readwrite, nonatomic) NSArray *metrics;
+@property (readwrite, nonatomic) NSArray *properties;
+
+@property (readwrite) NSInteger totalEventCount;
 
 @end

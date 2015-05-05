@@ -69,51 +69,6 @@
     return copy;
 }
 
-- (void) storeRawCurrentVisit:(NSDictionary *)rawVisit {
-
-    self.totalEventCount = [rawVisit[@"total_event_count"] integerValue];
-    self.creationTimestamp = [rawVisit[@"creation_ts"] doubleValue];
-    
-    [self updateProfileAttributesFromSource:rawVisit];
-}
-
-#pragma mark - Attributes
-
-- (void) updateProfileAttributesFromSource:(NSDictionary *)source {
-    
-    [self updateDatesFromSource:source];
-    [self updateFlagsFromSource:source];
-    [self updateMetricsFromSource:source];
-    [self updatePropertiesFromSource:source];
-}
-
-- (void) updateDatesFromSource:(NSDictionary *)source {
-    
-    NSArray *dates = [TEALProfileHelpers arrayOfDatesFromSource:source];
-    
-    self.dates = dates;
-}
-
-- (void) updateFlagsFromSource:(NSDictionary *)source {
-    
-    NSArray *flags = [TEALProfileHelpers arrayOfFlagsFromSource:source];
-    
-    self.flags = flags;
-}
-
-- (void) updateMetricsFromSource:(NSDictionary *)source {
-    
-    NSArray *metrics = [TEALProfileHelpers arrayOfMetricsFromSource:source];
-    
-    self.metrics = metrics;
-}
-
-- (void) updatePropertiesFromSource:(NSDictionary *)source {
-    
-    NSArray *properties = [TEALProfileHelpers arrayOfPropertiesFromSource:source];
-    
-    self.properties = properties;
-}
 
 #pragma mark - Info / Dump
 
