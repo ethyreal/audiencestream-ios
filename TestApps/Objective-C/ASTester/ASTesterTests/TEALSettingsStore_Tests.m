@@ -31,13 +31,13 @@
 - (void)setUp {
     [super setUp];
     
-    self.operationManager   = [TEALOperationManager new];
+    self.operationManager = [TEALOperationManager new];
     
-    self.urlSessionManager  = [[TEALURLSessionManager alloc] initWithConfiguration:nil];
+    self.urlSessionManager = [[TEALURLSessionManager alloc] initWithConfiguration:nil];
     
     self.urlSessionManager.completionQueue = self.operationManager.underlyingQueue;
 
-    self.settingsStore      = [[TEALSettingsStore alloc] initWithConfiguration:self];
+    self.settingsStore = [[TEALSettingsStore alloc] initWithConfiguration:self];
 
     self.configuration = [TEALAudienceStreamConfiguration configurationWithAccount:@"tealiummobile"
                                                                            profile:@"demo"
