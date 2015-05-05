@@ -49,6 +49,20 @@
     [aCoder encodeInteger:self.type forKey:@"type"];
 }
 
+- (BOOL) isEqualAttribute:(TEALProfileAttribute *)attribute {
+    
+    if (![attribute isKindOfClass:[TEALProfileAttribute class]]) {
+        return NO;
+    }
+    
+    if (!self.attributeID || !attribute.attributeID) {
+        return NO;
+    }
+    
+    return [self.attributeID isEqualToString:attribute.attributeID];
+}
+
+
 @end
 
 @implementation TEALProfileAudienceAttribute
@@ -187,12 +201,31 @@
     [aCoder encodeDouble:self.timestamp forKey:@"timestamp"];
 }
 
+- (BOOL) isEqualAttribute:(TEALProfileAttribute *)attribute {
+
+    if (![super isEqualAttribute:attribute]) {
+        return NO;
+    }
+    
+    if (![attribute isKindOfClass:[TEALProfileDateAttribute class]]) {
+        return NO;
+    }
+
+    TEALProfileDateAttribute *date = (TEALProfileDateAttribute *)attribute;
+
+    if (!self.timestamp || !date.timestamp) {
+        return NO;
+    }
+    
+    return self.timestamp == date.timestamp;
+}
+
 
 - (NSString *) description {
     
     return [NSString stringWithFormat:@"Date Attribute: \r \
             id: %@  \r \
-            value: %f",
+            timestamp: %f",
             self.attributeID,
             self.timestamp];
 }
@@ -235,6 +268,21 @@
     [super encodeWithCoder:aCoder];
     
     [aCoder encodeBool:self.value forKey:@"value"];
+}
+
+- (BOOL) isEqualAttribute:(TEALProfileAttribute *)attribute {
+    
+    if (![super isEqualAttribute:attribute]) {
+        return NO;
+    }
+    
+    if (![attribute isKindOfClass:[TEALProfileFlagAttribute class]]) {
+        return NO;
+    }
+    
+    TEALProfileFlagAttribute *flag = (TEALProfileFlagAttribute *)attribute;
+    
+    return self.value == flag.value;
 }
 
 - (NSString *) description {
@@ -288,6 +336,21 @@
     [aCoder encodeFloat:self.value forKey:@"value"];
 }
 
+- (BOOL) isEqualAttribute:(TEALProfileAttribute *)attribute {
+    
+    if (![super isEqualAttribute:attribute]) {
+        return NO;
+    }
+    
+    if (![attribute isKindOfClass:[TEALProfileMetricAttribute class]]) {
+        return NO;
+    }
+    
+    TEALProfileMetricAttribute *metric = (TEALProfileMetricAttribute *)attribute;
+    
+    return self.value == metric.value;
+}
+
 - (NSString *) description {
     
     return [NSString stringWithFormat:@"Metric Attribute: \r \
@@ -335,6 +398,25 @@
     [super encodeWithCoder:aCoder];
     
     [aCoder encodeObject:self.value forKey:@"value"];
+}
+
+- (BOOL) isEqualAttribute:(TEALProfileAttribute *)attribute {
+    
+    if (![super isEqualAttribute:attribute]) {
+        return NO;
+    }
+    
+    if (![attribute isKindOfClass:[TEALProfilePropertyAttribute class]]) {
+        return NO;
+    }
+    
+    TEALProfilePropertyAttribute *property = (TEALProfilePropertyAttribute *)attribute;
+    
+    if (!self.value || !property.value) {
+        return NO;
+    }
+    
+    return [self.value isEqualToString:property.value];
 }
 
 - (NSString *) description {

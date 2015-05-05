@@ -27,6 +27,8 @@ typedef NS_ENUM(NSInteger, TEALProfileAttributeType) {
 
 - (instancetype) initWithType:(TEALProfileAttributeType)type;
 
+- (BOOL) isEqualAttribute:(id)object;
+
 @end
 
 
