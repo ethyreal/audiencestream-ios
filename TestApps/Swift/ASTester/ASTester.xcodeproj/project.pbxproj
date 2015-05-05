@@ -1,821 +1,1986 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		E74B27D91AF43C8100CE4883 /* TEALAudienceStreamDatasources.m in Sources */ = {isa = PBXBuildFile; fileRef = E74B27AC1AF43C8100CE4883 /* TEALAudienceStreamDatasources.m */; };
-		E74B27DA1AF43C8100CE4883 /* TEALDatasourceStore+TEALAudienceStreamAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E74B27AE1AF43C8100CE4883 /* TEALDatasourceStore+TEALAudienceStreamAdditions.m */; };
-		E74B27DC1AF43C8100CE4883 /* TEALAudienceStreamAPIHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = E74B27B41AF43C8100CE4883 /* TEALAudienceStreamAPIHelpers.m */; };
-		E74B27DD1AF43C8100CE4883 /* TEALNetworkHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = E74B27B61AF43C8100CE4883 /* TEALNetworkHelpers.m */; };
-		E74B27DE1AF43C8100CE4883 /* TEALURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E74B27B81AF43C8100CE4883 /* TEALURLSessionManager.m */; };
-		E74B27DF1AF43C8100CE4883 /* TEALProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = E74B27BD1AF43C8100CE4883 /* TEALProfile.m */; };
-		E74B27E01AF43C8100CE4883 /* TEALProfileAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = E74B27BF1AF43C8100CE4883 /* TEALProfileAttribute.m */; };
-		E74B27E11AF43C8100CE4883 /* TEALProfileCurrentVisit.m in Sources */ = {isa = PBXBuildFile; fileRef = E74B27C11AF43C8100CE4883 /* TEALProfileCurrentVisit.m */; };
-		E74B27E21AF43C8100CE4883 /* TEALProfileHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = E74B27C31AF43C8100CE4883 /* TEALProfileHelpers.m */; };
-		E74B27E31AF43C8100CE4883 /* TEALProfileStore.m in Sources */ = {isa = PBXBuildFile; fileRef = E74B27C51AF43C8100CE4883 /* TEALProfileStore.m */; };
-		E74B27E41AF43C8100CE4883 /* TEALSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = E74B27C81AF43C8100CE4883 /* TEALSettings.m */; };
-		E74B27E51AF43C8100CE4883 /* TEALSettingsStore.m in Sources */ = {isa = PBXBuildFile; fileRef = E74B27CA1AF43C8100CE4883 /* TEALSettingsStore.m */; };
-		E74B27E61AF43C8100CE4883 /* TEALActionQueueManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E74B27CD1AF43C8100CE4883 /* TEALActionQueueManager.m */; };
-		E74B27E71AF43C8100CE4883 /* TEALError.m in Sources */ = {isa = PBXBuildFile; fileRef = E74B27CF1AF43C8100CE4883 /* TEALError.m */; };
-		E74B27E81AF43C8100CE4883 /* TEALLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = E74B27D11AF43C8100CE4883 /* TEALLogger.m */; };
-		E74B27E91AF43C8100CE4883 /* TEALOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E74B27D31AF43C8100CE4883 /* TEALOperationManager.m */; };
-		E74B27EA1AF43C8100CE4883 /* TEALSystemHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = E74B27D51AF43C8100CE4883 /* TEALSystemHelpers.m */; };
-		E74B27FF1AF8290A00CE4883 /* TEALAudienceStreamDispatchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E74B27FC1AF8290A00CE4883 /* TEALAudienceStreamDispatchManager.m */; };
-		E74B28001AF8290A00CE4883 /* TEALAudienceStreamDispatchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E74B27FC1AF8290A00CE4883 /* TEALAudienceStreamDispatchManager.m */; };
-		E74B28011AF8290A00CE4883 /* TEALEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = E74B27FE1AF8290A00CE4883 /* TEALEvent.m */; };
-		E74B28021AF8290A00CE4883 /* TEALEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = E74B27FE1AF8290A00CE4883 /* TEALEvent.m */; };
-		E74B28771AF837BB00CE4883 /* NSArray+TealiumAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E74B28551AF837BB00CE4883 /* NSArray+TealiumAdditions.m */; };
-		E74B28781AF837BB00CE4883 /* NSArray+TealiumAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E74B28551AF837BB00CE4883 /* NSArray+TealiumAdditions.m */; };
-		E74B28791AF837BB00CE4883 /* NSDate+TealiumAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E74B28571AF837BB00CE4883 /* NSDate+TealiumAdditions.m */; };
-		E74B287A1AF837BB00CE4883 /* NSDate+TealiumAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E74B28571AF837BB00CE4883 /* NSDate+TealiumAdditions.m */; };
-		E74B287B1AF837BB00CE4883 /* NSDictionary+TealiumAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E74B28591AF837BB00CE4883 /* NSDictionary+TealiumAdditions.m */; };
-		E74B287C1AF837BB00CE4883 /* NSDictionary+TealiumAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E74B28591AF837BB00CE4883 /* NSDictionary+TealiumAdditions.m */; };
-		E74B287D1AF837BB00CE4883 /* NSObject+TealiumAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E74B285B1AF837BB00CE4883 /* NSObject+TealiumAdditions.m */; };
-		E74B287E1AF837BB00CE4883 /* NSObject+TealiumAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E74B285B1AF837BB00CE4883 /* NSObject+TealiumAdditions.m */; };
-		E74B287F1AF837BB00CE4883 /* NSString+TealiumAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E74B285D1AF837BB00CE4883 /* NSString+TealiumAdditions.m */; };
-		E74B28801AF837BB00CE4883 /* NSString+TealiumAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E74B285D1AF837BB00CE4883 /* NSString+TealiumAdditions.m */; };
-		E74B28811AF837BB00CE4883 /* UIColor+TealiumAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E74B285F1AF837BB00CE4883 /* UIColor+TealiumAdditions.m */; };
-		E74B28821AF837BB00CE4883 /* UIColor+TealiumAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E74B285F1AF837BB00CE4883 /* UIColor+TealiumAdditions.m */; };
-		E74B28831AF837BB00CE4883 /* UIImage+TealiumAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E74B28611AF837BB00CE4883 /* UIImage+TealiumAdditions.m */; };
-		E74B28841AF837BB00CE4883 /* UIImage+TealiumAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E74B28611AF837BB00CE4883 /* UIImage+TealiumAdditions.m */; };
-		E74B28851AF837BB00CE4883 /* TEALSwizzler.m in Sources */ = {isa = PBXBuildFile; fileRef = E74B28661AF837BB00CE4883 /* TEALSwizzler.m */; };
-		E74B28861AF837BB00CE4883 /* TEALSwizzler.m in Sources */ = {isa = PBXBuildFile; fileRef = E74B28661AF837BB00CE4883 /* TEALSwizzler.m */; };
-		E74B28871AF837BB00CE4883 /* TEALDispatchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E74B28691AF837BB00CE4883 /* TEALDispatchManager.m */; };
-		E74B28881AF837BB00CE4883 /* TEALDispatchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E74B28691AF837BB00CE4883 /* TEALDispatchManager.m */; };
-		E74B28891AF837BB00CE4883 /* TEALReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E74B286B1AF837BB00CE4883 /* TEALReachabilityManager.m */; };
-		E74B288A1AF837BB00CE4883 /* TEALReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E74B286B1AF837BB00CE4883 /* TEALReachabilityManager.m */; };
-		E74B288B1AF837BB00CE4883 /* TEALSimpleNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E74B286D1AF837BB00CE4883 /* TEALSimpleNetworkManager.m */; };
-		E74B288C1AF837BB00CE4883 /* TEALSimpleNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E74B286D1AF837BB00CE4883 /* TEALSimpleNetworkManager.m */; };
-		E74B288D1AF837BB00CE4883 /* TEALDataQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = E74B28711AF837BB00CE4883 /* TEALDataQueue.m */; };
-		E74B288E1AF837BB00CE4883 /* TEALDataQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = E74B28711AF837BB00CE4883 /* TEALDataQueue.m */; };
-		E74B288F1AF837BB00CE4883 /* TEALDispatch.m in Sources */ = {isa = PBXBuildFile; fileRef = E74B28731AF837BB00CE4883 /* TEALDispatch.m */; };
-		E74B28901AF837BB00CE4883 /* TEALDispatch.m in Sources */ = {isa = PBXBuildFile; fileRef = E74B28731AF837BB00CE4883 /* TEALDispatch.m */; };
-		E74B28911AF837BB00CE4883 /* TEALDatasourceStore.m in Sources */ = {isa = PBXBuildFile; fileRef = E74B28761AF837BB00CE4883 /* TEALDatasourceStore.m */; };
-		E74B28921AF837BB00CE4883 /* TEALDatasourceStore.m in Sources */ = {isa = PBXBuildFile; fileRef = E74B28761AF837BB00CE4883 /* TEALDatasourceStore.m */; };
-		E7F2E34E1AAF458100D90835 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F2E34D1AAF458100D90835 /* AppDelegate.swift */; };
-		E7F2E3501AAF458100D90835 /* TestMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F2E34F1AAF458100D90835 /* TestMenuViewController.swift */; };
-		E7F2E3531AAF458100D90835 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7F2E3511AAF458100D90835 /* Main.storyboard */; };
-		E7F2E3551AAF458100D90835 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7F2E3541AAF458100D90835 /* Images.xcassets */; };
-		E7F2E3581AAF458100D90835 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7F2E3561AAF458100D90835 /* LaunchScreen.xib */; };
-		E7F2E3641AAF458100D90835 /* ASTesterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F2E3631AAF458100D90835 /* ASTesterTests.swift */; };
-		E7F2E3BC1AAF464B00D90835 /* TEALAudienceStream.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F2E3991AAF464B00D90835 /* TEALAudienceStream.m */; };
-		E7F2E3BD1AAF464B00D90835 /* TEALAudienceStream.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F2E3991AAF464B00D90835 /* TEALAudienceStream.m */; };
-		E7F2E3BE1AAF464B00D90835 /* TEALAudienceStreamConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F2E39B1AAF464B00D90835 /* TEALAudienceStreamConfiguration.m */; };
-		E7F2E3BF1AAF464B00D90835 /* TEALAudienceStreamConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F2E39B1AAF464B00D90835 /* TEALAudienceStreamConfiguration.m */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		E7F2E35E1AAF458100D90835 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E7F2E3401AAF458100D90835 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E7F2E3471AAF458100D90835;
-			remoteInfo = ASTester;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		E74B27AB1AF43C8100CE4883 /* TEALAudienceStreamDatasources.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TEALAudienceStreamDatasources.h; sourceTree = "<group>"; };
-		E74B27AC1AF43C8100CE4883 /* TEALAudienceStreamDatasources.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TEALAudienceStreamDatasources.m; sourceTree = "<group>"; };
-		E74B27AD1AF43C8100CE4883 /* TEALDatasourceStore+TEALAudienceStreamAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TEALDatasourceStore+TEALAudienceStreamAdditions.h"; sourceTree = "<group>"; };
-		E74B27AE1AF43C8100CE4883 /* TEALDatasourceStore+TEALAudienceStreamAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TEALDatasourceStore+TEALAudienceStreamAdditions.m"; sourceTree = "<group>"; };
-		E74B27B31AF43C8100CE4883 /* TEALAudienceStreamAPIHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TEALAudienceStreamAPIHelpers.h; sourceTree = "<group>"; };
-		E74B27B41AF43C8100CE4883 /* TEALAudienceStreamAPIHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TEALAudienceStreamAPIHelpers.m; sourceTree = "<group>"; };
-		E74B27B51AF43C8100CE4883 /* TEALNetworkHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TEALNetworkHelpers.h; sourceTree = "<group>"; };
-		E74B27B61AF43C8100CE4883 /* TEALNetworkHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TEALNetworkHelpers.m; sourceTree = "<group>"; };
-		E74B27B71AF43C8100CE4883 /* TEALURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TEALURLSessionManager.h; sourceTree = "<group>"; };
-		E74B27B81AF43C8100CE4883 /* TEALURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TEALURLSessionManager.m; sourceTree = "<group>"; };
-		E74B27BB1AF43C8100CE4883 /* TEALProfile+PrivateHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TEALProfile+PrivateHeader.h"; sourceTree = "<group>"; };
-		E74B27BC1AF43C8100CE4883 /* TEALProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TEALProfile.h; sourceTree = "<group>"; };
-		E74B27BD1AF43C8100CE4883 /* TEALProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TEALProfile.m; sourceTree = "<group>"; };
-		E74B27BE1AF43C8100CE4883 /* TEALProfileAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TEALProfileAttribute.h; sourceTree = "<group>"; };
-		E74B27BF1AF43C8100CE4883 /* TEALProfileAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TEALProfileAttribute.m; sourceTree = "<group>"; };
-		E74B27C01AF43C8100CE4883 /* TEALProfileCurrentVisit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TEALProfileCurrentVisit.h; sourceTree = "<group>"; };
-		E74B27C11AF43C8100CE4883 /* TEALProfileCurrentVisit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TEALProfileCurrentVisit.m; sourceTree = "<group>"; };
-		E74B27C21AF43C8100CE4883 /* TEALProfileHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TEALProfileHelpers.h; sourceTree = "<group>"; };
-		E74B27C31AF43C8100CE4883 /* TEALProfileHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TEALProfileHelpers.m; sourceTree = "<group>"; };
-		E74B27C41AF43C8100CE4883 /* TEALProfileStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TEALProfileStore.h; sourceTree = "<group>"; };
-		E74B27C51AF43C8100CE4883 /* TEALProfileStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TEALProfileStore.m; sourceTree = "<group>"; };
-		E74B27C71AF43C8100CE4883 /* TEALSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TEALSettings.h; sourceTree = "<group>"; };
-		E74B27C81AF43C8100CE4883 /* TEALSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TEALSettings.m; sourceTree = "<group>"; };
-		E74B27C91AF43C8100CE4883 /* TEALSettingsStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TEALSettingsStore.h; sourceTree = "<group>"; };
-		E74B27CA1AF43C8100CE4883 /* TEALSettingsStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TEALSettingsStore.m; sourceTree = "<group>"; };
-		E74B27CC1AF43C8100CE4883 /* TEALActionQueueManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TEALActionQueueManager.h; sourceTree = "<group>"; };
-		E74B27CD1AF43C8100CE4883 /* TEALActionQueueManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TEALActionQueueManager.m; sourceTree = "<group>"; };
-		E74B27CE1AF43C8100CE4883 /* TEALError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TEALError.h; sourceTree = "<group>"; };
-		E74B27CF1AF43C8100CE4883 /* TEALError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TEALError.m; sourceTree = "<group>"; };
-		E74B27D01AF43C8100CE4883 /* TEALLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TEALLogger.h; sourceTree = "<group>"; };
-		E74B27D11AF43C8100CE4883 /* TEALLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TEALLogger.m; sourceTree = "<group>"; };
-		E74B27D21AF43C8100CE4883 /* TEALOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TEALOperationManager.h; sourceTree = "<group>"; };
-		E74B27D31AF43C8100CE4883 /* TEALOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TEALOperationManager.m; sourceTree = "<group>"; };
-		E74B27D41AF43C8100CE4883 /* TEALSystemHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TEALSystemHelpers.h; sourceTree = "<group>"; };
-		E74B27D51AF43C8100CE4883 /* TEALSystemHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TEALSystemHelpers.m; sourceTree = "<group>"; };
-		E74B27D61AF43C8100CE4883 /* TEALSystemProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TEALSystemProtocols.h; sourceTree = "<group>"; };
-		E74B27FB1AF8290A00CE4883 /* TEALAudienceStreamDispatchManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TEALAudienceStreamDispatchManager.h; sourceTree = "<group>"; };
-		E74B27FC1AF8290A00CE4883 /* TEALAudienceStreamDispatchManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TEALAudienceStreamDispatchManager.m; sourceTree = "<group>"; };
-		E74B27FD1AF8290A00CE4883 /* TEALEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TEALEvent.h; sourceTree = "<group>"; };
-		E74B27FE1AF8290A00CE4883 /* TEALEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TEALEvent.m; sourceTree = "<group>"; };
-		E74B28541AF837BB00CE4883 /* NSArray+TealiumAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+TealiumAdditions.h"; sourceTree = "<group>"; };
-		E74B28551AF837BB00CE4883 /* NSArray+TealiumAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+TealiumAdditions.m"; sourceTree = "<group>"; };
-		E74B28561AF837BB00CE4883 /* NSDate+TealiumAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+TealiumAdditions.h"; sourceTree = "<group>"; };
-		E74B28571AF837BB00CE4883 /* NSDate+TealiumAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+TealiumAdditions.m"; sourceTree = "<group>"; };
-		E74B28581AF837BB00CE4883 /* NSDictionary+TealiumAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+TealiumAdditions.h"; sourceTree = "<group>"; };
-		E74B28591AF837BB00CE4883 /* NSDictionary+TealiumAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+TealiumAdditions.m"; sourceTree = "<group>"; };
-		E74B285A1AF837BB00CE4883 /* NSObject+TealiumAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+TealiumAdditions.h"; sourceTree = "<group>"; };
-		E74B285B1AF837BB00CE4883 /* NSObject+TealiumAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+TealiumAdditions.m"; sourceTree = "<group>"; };
-		E74B285C1AF837BB00CE4883 /* NSString+TealiumAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+TealiumAdditions.h"; sourceTree = "<group>"; };
-		E74B285D1AF837BB00CE4883 /* NSString+TealiumAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TealiumAdditions.m"; sourceTree = "<group>"; };
-		E74B285E1AF837BB00CE4883 /* UIColor+TealiumAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+TealiumAdditions.h"; sourceTree = "<group>"; };
-		E74B285F1AF837BB00CE4883 /* UIColor+TealiumAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+TealiumAdditions.m"; sourceTree = "<group>"; };
-		E74B28601AF837BB00CE4883 /* UIImage+TealiumAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+TealiumAdditions.h"; sourceTree = "<group>"; };
-		E74B28611AF837BB00CE4883 /* UIImage+TealiumAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+TealiumAdditions.m"; sourceTree = "<group>"; };
-		E74B28631AF837BB00CE4883 /* TEALBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TEALBlocks.h; sourceTree = "<group>"; };
-		E74B28641AF837BB00CE4883 /* TEALDispatchConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TEALDispatchConstants.h; sourceTree = "<group>"; };
-		E74B28651AF837BB00CE4883 /* TEALSwizzler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TEALSwizzler.h; sourceTree = "<group>"; };
-		E74B28661AF837BB00CE4883 /* TEALSwizzler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TEALSwizzler.m; sourceTree = "<group>"; };
-		E74B28681AF837BB00CE4883 /* TEALDispatchManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TEALDispatchManager.h; sourceTree = "<group>"; };
-		E74B28691AF837BB00CE4883 /* TEALDispatchManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TEALDispatchManager.m; sourceTree = "<group>"; };
-		E74B286A1AF837BB00CE4883 /* TEALReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TEALReachabilityManager.h; sourceTree = "<group>"; };
-		E74B286B1AF837BB00CE4883 /* TEALReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TEALReachabilityManager.m; sourceTree = "<group>"; };
-		E74B286C1AF837BB00CE4883 /* TEALSimpleNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TEALSimpleNetworkManager.h; sourceTree = "<group>"; };
-		E74B286D1AF837BB00CE4883 /* TEALSimpleNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TEALSimpleNetworkManager.m; sourceTree = "<group>"; };
-		E74B286F1AF837BB00CE4883 /* TEALDataQueue+PrivateHeaders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TEALDataQueue+PrivateHeaders.h"; sourceTree = "<group>"; };
-		E74B28701AF837BB00CE4883 /* TEALDataQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TEALDataQueue.h; sourceTree = "<group>"; };
-		E74B28711AF837BB00CE4883 /* TEALDataQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TEALDataQueue.m; sourceTree = "<group>"; };
-		E74B28721AF837BB00CE4883 /* TEALDispatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TEALDispatch.h; sourceTree = "<group>"; };
-		E74B28731AF837BB00CE4883 /* TEALDispatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TEALDispatch.m; sourceTree = "<group>"; };
-		E74B28751AF837BB00CE4883 /* TEALDatasourceStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TEALDatasourceStore.h; sourceTree = "<group>"; };
-		E74B28761AF837BB00CE4883 /* TEALDatasourceStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TEALDatasourceStore.m; sourceTree = "<group>"; };
-		E7F2E3481AAF458100D90835 /* ASTester.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ASTester.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E7F2E34C1AAF458100D90835 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E7F2E34D1AAF458100D90835 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E7F2E34F1AAF458100D90835 /* TestMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMenuViewController.swift; sourceTree = "<group>"; };
-		E7F2E3521AAF458100D90835 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E7F2E3541AAF458100D90835 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		E7F2E3571AAF458100D90835 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		E7F2E35D1AAF458100D90835 /* ASTesterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ASTesterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E7F2E3621AAF458100D90835 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E7F2E3631AAF458100D90835 /* ASTesterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASTesterTests.swift; sourceTree = "<group>"; };
-		E7F2E3971AAF464B00D90835 /* TEALAudienceSteam-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TEALAudienceSteam-Bridging-Header.h"; sourceTree = "<group>"; };
-		E7F2E3981AAF464B00D90835 /* TEALAudienceStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TEALAudienceStream.h; sourceTree = "<group>"; };
-		E7F2E3991AAF464B00D90835 /* TEALAudienceStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TEALAudienceStream.m; sourceTree = "<group>"; };
-		E7F2E39A1AAF464B00D90835 /* TEALAudienceStreamConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TEALAudienceStreamConfiguration.h; sourceTree = "<group>"; };
-		E7F2E39B1AAF464B00D90835 /* TEALAudienceStreamConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TEALAudienceStreamConfiguration.m; sourceTree = "<group>"; };
-		E7F2E4011AAF479A00D90835 /* ASTester-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ASTester-Bridging-Header.h"; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		E7F2E3451AAF458100D90835 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E7F2E35A1AAF458100D90835 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		E74B27AA1AF43C8100CE4883 /* datasources */ = {
-			isa = PBXGroup;
-			children = (
-				E74B27AB1AF43C8100CE4883 /* TEALAudienceStreamDatasources.h */,
-				E74B27AC1AF43C8100CE4883 /* TEALAudienceStreamDatasources.m */,
-				E74B27AD1AF43C8100CE4883 /* TEALDatasourceStore+TEALAudienceStreamAdditions.h */,
-				E74B27AE1AF43C8100CE4883 /* TEALDatasourceStore+TEALAudienceStreamAdditions.m */,
-			);
-			path = datasources;
-			sourceTree = "<group>";
-		};
-		E74B27B21AF43C8100CE4883 /* networking */ = {
-			isa = PBXGroup;
-			children = (
-				E74B27B31AF43C8100CE4883 /* TEALAudienceStreamAPIHelpers.h */,
-				E74B27B41AF43C8100CE4883 /* TEALAudienceStreamAPIHelpers.m */,
-				E74B27B51AF43C8100CE4883 /* TEALNetworkHelpers.h */,
-				E74B27B61AF43C8100CE4883 /* TEALNetworkHelpers.m */,
-				E74B27B71AF43C8100CE4883 /* TEALURLSessionManager.h */,
-				E74B27B81AF43C8100CE4883 /* TEALURLSessionManager.m */,
-			);
-			path = networking;
-			sourceTree = "<group>";
-		};
-		E74B27B91AF43C8100CE4883 /* profile */ = {
-			isa = PBXGroup;
-			children = (
-				E74B27BA1AF43C8100CE4883 /* model */,
-				E74B27C21AF43C8100CE4883 /* TEALProfileHelpers.h */,
-				E74B27C31AF43C8100CE4883 /* TEALProfileHelpers.m */,
-				E74B27C41AF43C8100CE4883 /* TEALProfileStore.h */,
-				E74B27C51AF43C8100CE4883 /* TEALProfileStore.m */,
-			);
-			path = profile;
-			sourceTree = "<group>";
-		};
-		E74B27BA1AF43C8100CE4883 /* model */ = {
-			isa = PBXGroup;
-			children = (
-				E74B27BB1AF43C8100CE4883 /* TEALProfile+PrivateHeader.h */,
-				E74B27BC1AF43C8100CE4883 /* TEALProfile.h */,
-				E74B27BD1AF43C8100CE4883 /* TEALProfile.m */,
-				E74B27BE1AF43C8100CE4883 /* TEALProfileAttribute.h */,
-				E74B27BF1AF43C8100CE4883 /* TEALProfileAttribute.m */,
-				E74B27C01AF43C8100CE4883 /* TEALProfileCurrentVisit.h */,
-				E74B27C11AF43C8100CE4883 /* TEALProfileCurrentVisit.m */,
-			);
-			path = model;
-			sourceTree = "<group>";
-		};
-		E74B27C61AF43C8100CE4883 /* settings */ = {
-			isa = PBXGroup;
-			children = (
-				E74B27C71AF43C8100CE4883 /* TEALSettings.h */,
-				E74B27C81AF43C8100CE4883 /* TEALSettings.m */,
-				E74B27C91AF43C8100CE4883 /* TEALSettingsStore.h */,
-				E74B27CA1AF43C8100CE4883 /* TEALSettingsStore.m */,
-			);
-			path = settings;
-			sourceTree = "<group>";
-		};
-		E74B27CB1AF43C8100CE4883 /* system */ = {
-			isa = PBXGroup;
-			children = (
-				E74B27CC1AF43C8100CE4883 /* TEALActionQueueManager.h */,
-				E74B27CD1AF43C8100CE4883 /* TEALActionQueueManager.m */,
-				E74B27CE1AF43C8100CE4883 /* TEALError.h */,
-				E74B27CF1AF43C8100CE4883 /* TEALError.m */,
-				E74B27D01AF43C8100CE4883 /* TEALLogger.h */,
-				E74B27D11AF43C8100CE4883 /* TEALLogger.m */,
-				E74B27D21AF43C8100CE4883 /* TEALOperationManager.h */,
-				E74B27D31AF43C8100CE4883 /* TEALOperationManager.m */,
-				E74B27D41AF43C8100CE4883 /* TEALSystemHelpers.h */,
-				E74B27D51AF43C8100CE4883 /* TEALSystemHelpers.m */,
-				E74B27D61AF43C8100CE4883 /* TEALSystemProtocols.h */,
-			);
-			path = system;
-			sourceTree = "<group>";
-		};
-		E74B27FA1AF8290A00CE4883 /* events */ = {
-			isa = PBXGroup;
-			children = (
-				E74B27FB1AF8290A00CE4883 /* TEALAudienceStreamDispatchManager.h */,
-				E74B27FC1AF8290A00CE4883 /* TEALAudienceStreamDispatchManager.m */,
-				E74B27FD1AF8290A00CE4883 /* TEALEvent.h */,
-				E74B27FE1AF8290A00CE4883 /* TEALEvent.m */,
-			);
-			path = events;
-			sourceTree = "<group>";
-		};
-		E74B28531AF837BB00CE4883 /* categories */ = {
-			isa = PBXGroup;
-			children = (
-				E74B28541AF837BB00CE4883 /* NSArray+TealiumAdditions.h */,
-				E74B28551AF837BB00CE4883 /* NSArray+TealiumAdditions.m */,
-				E74B28561AF837BB00CE4883 /* NSDate+TealiumAdditions.h */,
-				E74B28571AF837BB00CE4883 /* NSDate+TealiumAdditions.m */,
-				E74B28581AF837BB00CE4883 /* NSDictionary+TealiumAdditions.h */,
-				E74B28591AF837BB00CE4883 /* NSDictionary+TealiumAdditions.m */,
-				E74B285A1AF837BB00CE4883 /* NSObject+TealiumAdditions.h */,
-				E74B285B1AF837BB00CE4883 /* NSObject+TealiumAdditions.m */,
-				E74B285C1AF837BB00CE4883 /* NSString+TealiumAdditions.h */,
-				E74B285D1AF837BB00CE4883 /* NSString+TealiumAdditions.m */,
-				E74B285E1AF837BB00CE4883 /* UIColor+TealiumAdditions.h */,
-				E74B285F1AF837BB00CE4883 /* UIColor+TealiumAdditions.m */,
-				E74B28601AF837BB00CE4883 /* UIImage+TealiumAdditions.h */,
-				E74B28611AF837BB00CE4883 /* UIImage+TealiumAdditions.m */,
-			);
-			name = categories;
-			path = "../../Documents/iOS/ios-utilities/classes/categories";
-			sourceTree = "<group>";
-		};
-		E74B28621AF837BB00CE4883 /* helpers */ = {
-			isa = PBXGroup;
-			children = (
-				E74B28631AF837BB00CE4883 /* TEALBlocks.h */,
-				E74B28641AF837BB00CE4883 /* TEALDispatchConstants.h */,
-				E74B28651AF837BB00CE4883 /* TEALSwizzler.h */,
-				E74B28661AF837BB00CE4883 /* TEALSwizzler.m */,
-			);
-			name = helpers;
-			path = "../../Documents/iOS/ios-utilities/classes/helpers";
-			sourceTree = "<group>";
-		};
-		E74B28671AF837BB00CE4883 /* managers */ = {
-			isa = PBXGroup;
-			children = (
-				E74B28681AF837BB00CE4883 /* TEALDispatchManager.h */,
-				E74B28691AF837BB00CE4883 /* TEALDispatchManager.m */,
-				E74B286A1AF837BB00CE4883 /* TEALReachabilityManager.h */,
-				E74B286B1AF837BB00CE4883 /* TEALReachabilityManager.m */,
-				E74B286C1AF837BB00CE4883 /* TEALSimpleNetworkManager.h */,
-				E74B286D1AF837BB00CE4883 /* TEALSimpleNetworkManager.m */,
-			);
-			name = managers;
-			path = "../../Documents/iOS/ios-utilities/classes/managers";
-			sourceTree = "<group>";
-		};
-		E74B286E1AF837BB00CE4883 /* models */ = {
-			isa = PBXGroup;
-			children = (
-				E74B286F1AF837BB00CE4883 /* TEALDataQueue+PrivateHeaders.h */,
-				E74B28701AF837BB00CE4883 /* TEALDataQueue.h */,
-				E74B28711AF837BB00CE4883 /* TEALDataQueue.m */,
-				E74B28721AF837BB00CE4883 /* TEALDispatch.h */,
-				E74B28731AF837BB00CE4883 /* TEALDispatch.m */,
-			);
-			name = models;
-			path = "../../Documents/iOS/ios-utilities/classes/models";
-			sourceTree = "<group>";
-		};
-		E74B28741AF837BB00CE4883 /* store */ = {
-			isa = PBXGroup;
-			children = (
-				E74B28751AF837BB00CE4883 /* TEALDatasourceStore.h */,
-				E74B28761AF837BB00CE4883 /* TEALDatasourceStore.m */,
-			);
-			name = store;
-			path = "../../Documents/iOS/ios-utilities/classes/store";
-			sourceTree = "<group>";
-		};
-		E7F2E33F1AAF458100D90835 = {
-			isa = PBXGroup;
-			children = (
-				E7F2E36D1AAF461200D90835 /* Vendor */,
-				E7F2E34A1AAF458100D90835 /* ASTester */,
-				E7F2E3601AAF458100D90835 /* ASTesterTests */,
-				E7F2E3491AAF458100D90835 /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		E7F2E3491AAF458100D90835 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				E7F2E3481AAF458100D90835 /* ASTester.app */,
-				E7F2E35D1AAF458100D90835 /* ASTesterTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		E7F2E34A1AAF458100D90835 /* ASTester */ = {
-			isa = PBXGroup;
-			children = (
-				E7F2E4011AAF479A00D90835 /* ASTester-Bridging-Header.h */,
-				E7F2E34D1AAF458100D90835 /* AppDelegate.swift */,
-				E7F2E34F1AAF458100D90835 /* TestMenuViewController.swift */,
-				E7F2E3511AAF458100D90835 /* Main.storyboard */,
-				E7F2E3541AAF458100D90835 /* Images.xcassets */,
-				E7F2E3561AAF458100D90835 /* LaunchScreen.xib */,
-				E7F2E34B1AAF458100D90835 /* Supporting Files */,
-			);
-			path = ASTester;
-			sourceTree = "<group>";
-		};
-		E7F2E34B1AAF458100D90835 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				E7F2E34C1AAF458100D90835 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		E7F2E3601AAF458100D90835 /* ASTesterTests */ = {
-			isa = PBXGroup;
-			children = (
-				E7F2E3631AAF458100D90835 /* ASTesterTests.swift */,
-				E7F2E3611AAF458100D90835 /* Supporting Files */,
-			);
-			path = ASTesterTests;
-			sourceTree = "<group>";
-		};
-		E7F2E3611AAF458100D90835 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				E7F2E3621AAF458100D90835 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		E7F2E36D1AAF461200D90835 /* Vendor */ = {
-			isa = PBXGroup;
-			children = (
-				E7F2E36E1AAF461D00D90835 /* Tealium */,
-			);
-			name = Vendor;
-			sourceTree = "<group>";
-		};
-		E7F2E36E1AAF461D00D90835 /* Tealium */ = {
-			isa = PBXGroup;
-			children = (
-				E7F2E3C01AAF467800D90835 /* Utilities */,
-				E7F2E36F1AAF464B00D90835 /* AudienceStream */,
-			);
-			name = Tealium;
-			sourceTree = "<group>";
-		};
-		E7F2E36F1AAF464B00D90835 /* AudienceStream */ = {
-			isa = PBXGroup;
-			children = (
-				E74B27FA1AF8290A00CE4883 /* events */,
-				E74B27AA1AF43C8100CE4883 /* datasources */,
-				E74B27B21AF43C8100CE4883 /* networking */,
-				E74B27B91AF43C8100CE4883 /* profile */,
-				E74B27C61AF43C8100CE4883 /* settings */,
-				E74B27CB1AF43C8100CE4883 /* system */,
-				E7F2E3971AAF464B00D90835 /* TEALAudienceSteam-Bridging-Header.h */,
-				E7F2E3981AAF464B00D90835 /* TEALAudienceStream.h */,
-				E7F2E3991AAF464B00D90835 /* TEALAudienceStream.m */,
-				E7F2E39A1AAF464B00D90835 /* TEALAudienceStreamConfiguration.h */,
-				E7F2E39B1AAF464B00D90835 /* TEALAudienceStreamConfiguration.m */,
-			);
-			name = AudienceStream;
-			path = ../../../AudienceStream;
-			sourceTree = "<group>";
-		};
-		E7F2E3C01AAF467800D90835 /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				E74B28531AF837BB00CE4883 /* categories */,
-				E74B28621AF837BB00CE4883 /* helpers */,
-				E74B28671AF837BB00CE4883 /* managers */,
-				E74B286E1AF837BB00CE4883 /* models */,
-				E74B28741AF837BB00CE4883 /* store */,
-			);
-			name = Utilities;
-			path = "../../../../../../ios-utilities/classes";
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		E7F2E3471AAF458100D90835 /* ASTester */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E7F2E3671AAF458100D90835 /* Build configuration list for PBXNativeTarget "ASTester" */;
-			buildPhases = (
-				E7F2E3441AAF458100D90835 /* Sources */,
-				E7F2E3451AAF458100D90835 /* Frameworks */,
-				E7F2E3461AAF458100D90835 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = ASTester;
-			productName = ASTester;
-			productReference = E7F2E3481AAF458100D90835 /* ASTester.app */;
-			productType = "com.apple.product-type.application";
-		};
-		E7F2E35C1AAF458100D90835 /* ASTesterTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E7F2E36A1AAF458100D90835 /* Build configuration list for PBXNativeTarget "ASTesterTests" */;
-			buildPhases = (
-				E7F2E3591AAF458100D90835 /* Sources */,
-				E7F2E35A1AAF458100D90835 /* Frameworks */,
-				E7F2E35B1AAF458100D90835 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E7F2E35F1AAF458100D90835 /* PBXTargetDependency */,
-			);
-			name = ASTesterTests;
-			productName = ASTesterTests;
-			productReference = E7F2E35D1AAF458100D90835 /* ASTesterTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		E7F2E3401AAF458100D90835 /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastUpgradeCheck = 0610;
-				ORGANIZATIONNAME = "Tealium Inc.";
-				TargetAttributes = {
-					E7F2E3471AAF458100D90835 = {
-						CreatedOnToolsVersion = 6.1.1;
-					};
-					E7F2E35C1AAF458100D90835 = {
-						CreatedOnToolsVersion = 6.1.1;
-						TestTargetID = E7F2E3471AAF458100D90835;
-					};
-				};
-			};
-			buildConfigurationList = E7F2E3431AAF458100D90835 /* Build configuration list for PBXProject "ASTester" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-				Base,
-			);
-			mainGroup = E7F2E33F1AAF458100D90835;
-			productRefGroup = E7F2E3491AAF458100D90835 /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				E7F2E3471AAF458100D90835 /* ASTester */,
-				E7F2E35C1AAF458100D90835 /* ASTesterTests */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		E7F2E3461AAF458100D90835 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E7F2E3531AAF458100D90835 /* Main.storyboard in Resources */,
-				E7F2E3581AAF458100D90835 /* LaunchScreen.xib in Resources */,
-				E7F2E3551AAF458100D90835 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E7F2E35B1AAF458100D90835 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		E7F2E3441AAF458100D90835 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E74B27DA1AF43C8100CE4883 /* TEALDatasourceStore+TEALAudienceStreamAdditions.m in Sources */,
-				E74B28871AF837BB00CE4883 /* TEALDispatchManager.m in Sources */,
-				E74B27E21AF43C8100CE4883 /* TEALProfileHelpers.m in Sources */,
-				E74B28811AF837BB00CE4883 /* UIColor+TealiumAdditions.m in Sources */,
-				E74B28891AF837BB00CE4883 /* TEALReachabilityManager.m in Sources */,
-				E74B27DC1AF43C8100CE4883 /* TEALAudienceStreamAPIHelpers.m in Sources */,
-				E74B27E41AF43C8100CE4883 /* TEALSettings.m in Sources */,
-				E74B288F1AF837BB00CE4883 /* TEALDispatch.m in Sources */,
-				E74B28831AF837BB00CE4883 /* UIImage+TealiumAdditions.m in Sources */,
-				E74B288D1AF837BB00CE4883 /* TEALDataQueue.m in Sources */,
-				E74B288B1AF837BB00CE4883 /* TEALSimpleNetworkManager.m in Sources */,
-				E7F2E3BC1AAF464B00D90835 /* TEALAudienceStream.m in Sources */,
-				E74B287F1AF837BB00CE4883 /* NSString+TealiumAdditions.m in Sources */,
-				E7F2E3BE1AAF464B00D90835 /* TEALAudienceStreamConfiguration.m in Sources */,
-				E74B27E51AF43C8100CE4883 /* TEALSettingsStore.m in Sources */,
-				E74B27EA1AF43C8100CE4883 /* TEALSystemHelpers.m in Sources */,
-				E74B28771AF837BB00CE4883 /* NSArray+TealiumAdditions.m in Sources */,
-				E74B28911AF837BB00CE4883 /* TEALDatasourceStore.m in Sources */,
-				E74B27DF1AF43C8100CE4883 /* TEALProfile.m in Sources */,
-				E74B27E71AF43C8100CE4883 /* TEALError.m in Sources */,
-				E74B28011AF8290A00CE4883 /* TEALEvent.m in Sources */,
-				E74B28791AF837BB00CE4883 /* NSDate+TealiumAdditions.m in Sources */,
-				E74B27D91AF43C8100CE4883 /* TEALAudienceStreamDatasources.m in Sources */,
-				E7F2E3501AAF458100D90835 /* TestMenuViewController.swift in Sources */,
-				E74B287D1AF837BB00CE4883 /* NSObject+TealiumAdditions.m in Sources */,
-				E74B27FF1AF8290A00CE4883 /* TEALAudienceStreamDispatchManager.m in Sources */,
-				E74B27E31AF43C8100CE4883 /* TEALProfileStore.m in Sources */,
-				E74B28851AF837BB00CE4883 /* TEALSwizzler.m in Sources */,
-				E74B27DD1AF43C8100CE4883 /* TEALNetworkHelpers.m in Sources */,
-				E74B287B1AF837BB00CE4883 /* NSDictionary+TealiumAdditions.m in Sources */,
-				E74B27E81AF43C8100CE4883 /* TEALLogger.m in Sources */,
-				E74B27E61AF43C8100CE4883 /* TEALActionQueueManager.m in Sources */,
-				E74B27DE1AF43C8100CE4883 /* TEALURLSessionManager.m in Sources */,
-				E7F2E34E1AAF458100D90835 /* AppDelegate.swift in Sources */,
-				E74B27E01AF43C8100CE4883 /* TEALProfileAttribute.m in Sources */,
-				E74B27E11AF43C8100CE4883 /* TEALProfileCurrentVisit.m in Sources */,
-				E74B27E91AF43C8100CE4883 /* TEALOperationManager.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E7F2E3591AAF458100D90835 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E74B288E1AF837BB00CE4883 /* TEALDataQueue.m in Sources */,
-				E74B28821AF837BB00CE4883 /* UIColor+TealiumAdditions.m in Sources */,
-				E74B28881AF837BB00CE4883 /* TEALDispatchManager.m in Sources */,
-				E74B28001AF8290A00CE4883 /* TEALAudienceStreamDispatchManager.m in Sources */,
-				E74B28801AF837BB00CE4883 /* NSString+TealiumAdditions.m in Sources */,
-				E74B28921AF837BB00CE4883 /* TEALDatasourceStore.m in Sources */,
-				E74B287A1AF837BB00CE4883 /* NSDate+TealiumAdditions.m in Sources */,
-				E74B28861AF837BB00CE4883 /* TEALSwizzler.m in Sources */,
-				E74B28901AF837BB00CE4883 /* TEALDispatch.m in Sources */,
-				E7F2E3BD1AAF464B00D90835 /* TEALAudienceStream.m in Sources */,
-				E74B28841AF837BB00CE4883 /* UIImage+TealiumAdditions.m in Sources */,
-				E74B28781AF837BB00CE4883 /* NSArray+TealiumAdditions.m in Sources */,
-				E74B287C1AF837BB00CE4883 /* NSDictionary+TealiumAdditions.m in Sources */,
-				E74B288C1AF837BB00CE4883 /* TEALSimpleNetworkManager.m in Sources */,
-				E74B28021AF8290A00CE4883 /* TEALEvent.m in Sources */,
-				E74B287E1AF837BB00CE4883 /* NSObject+TealiumAdditions.m in Sources */,
-				E7F2E3641AAF458100D90835 /* ASTesterTests.swift in Sources */,
-				E74B288A1AF837BB00CE4883 /* TEALReachabilityManager.m in Sources */,
-				E7F2E3BF1AAF464B00D90835 /* TEALAudienceStreamConfiguration.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		E7F2E35F1AAF458100D90835 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E7F2E3471AAF458100D90835 /* ASTester */;
-			targetProxy = E7F2E35E1AAF458100D90835 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		E7F2E3511AAF458100D90835 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E7F2E3521AAF458100D90835 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		E7F2E3561AAF458100D90835 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E7F2E3571AAF458100D90835 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
-/* Begin XCBuildConfiguration section */
-		E7F2E3651AAF458100D90835 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		E7F2E3661AAF458100D90835 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		E7F2E3681AAF458100D90835 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = ASTester/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "ASTester/ASTester-Bridging-Header.h";
-			};
-			name = Debug;
-		};
-		E7F2E3691AAF458100D90835 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = ASTester/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "ASTester/ASTester-Bridging-Header.h";
-			};
-			name = Release;
-		};
-		E7F2E36B1AAF458100D90835 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = ASTesterTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ASTester.app/ASTester";
-			};
-			name = Debug;
-		};
-		E7F2E36C1AAF458100D90835 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = ASTesterTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ASTester.app/ASTester";
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		E7F2E3431AAF458100D90835 /* Build configuration list for PBXProject "ASTester" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E7F2E3651AAF458100D90835 /* Debug */,
-				E7F2E3661AAF458100D90835 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E7F2E3671AAF458100D90835 /* Build configuration list for PBXNativeTarget "ASTester" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E7F2E3681AAF458100D90835 /* Debug */,
-				E7F2E3691AAF458100D90835 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E7F2E36A1AAF458100D90835 /* Build configuration list for PBXNativeTarget "ASTesterTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E7F2E36B1AAF458100D90835 /* Debug */,
-				E7F2E36C1AAF458100D90835 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = E7F2E3401AAF458100D90835 /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>108549D56B8197399024B868</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-ASTester/Pods-ASTester-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>15F81025AC5A75A67AC82EA0</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-ASTesterTests/Pods-ASTesterTests-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>3089ECAD14416F54BB71048F</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>A30DE77F874DAC93D3378BF9</string>
+				<string>415F43DF211AFA8E89ACF1C5</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>415F43DF211AFA8E89ACF1C5</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods-ASTesterTests.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>548670E0D91A5B32C1AF235F</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>FF603392B9EBD688354B0CE6</string>
+				<string>C140CD375B8DE9B69F3EFD27</string>
+				<string>669CA48DE7214C25C746CED1</string>
+				<string>E282695FAC3C0E853E0DB22C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>64EDAF97F11C4C0D9B9CCF79</key>
+		<dict>
+			<key>fileRef</key>
+			<string>415F43DF211AFA8E89ACF1C5</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>669CA48DE7214C25C746CED1</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-ASTesterTests.debug.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-ASTesterTests/Pods-ASTesterTests.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7806C52D167B3EDBE7E21966</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>A30DE77F874DAC93D3378BF9</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods-ASTester.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>A91E2C5407FAF6D052996C9F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A30DE77F874DAC93D3378BF9</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>AB83F07671586E77F5C5A254</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>C140CD375B8DE9B69F3EFD27</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-ASTester.release.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-ASTester/Pods-ASTester.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E282695FAC3C0E853E0DB22C</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-ASTesterTests.release.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-ASTesterTests/Pods-ASTesterTests.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E74B27AA1AF43C8100CE4883</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>E74B27AB1AF43C8100CE4883</string>
+				<string>E74B27AC1AF43C8100CE4883</string>
+				<string>E74B27AD1AF43C8100CE4883</string>
+				<string>E74B27AE1AF43C8100CE4883</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>datasources</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E74B27AB1AF43C8100CE4883</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>TEALAudienceStreamDatasources.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E74B27AC1AF43C8100CE4883</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>TEALAudienceStreamDatasources.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E74B27AD1AF43C8100CE4883</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>TEALDatasourceStore+TEALAudienceStreamAdditions.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E74B27AE1AF43C8100CE4883</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>TEALDatasourceStore+TEALAudienceStreamAdditions.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E74B27B21AF43C8100CE4883</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>E74B27B31AF43C8100CE4883</string>
+				<string>E74B27B41AF43C8100CE4883</string>
+				<string>E74B27B51AF43C8100CE4883</string>
+				<string>E74B27B61AF43C8100CE4883</string>
+				<string>E74B27B71AF43C8100CE4883</string>
+				<string>E74B27B81AF43C8100CE4883</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>networking</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E74B27B31AF43C8100CE4883</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>TEALAudienceStreamAPIHelpers.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E74B27B41AF43C8100CE4883</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>TEALAudienceStreamAPIHelpers.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E74B27B51AF43C8100CE4883</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>TEALNetworkHelpers.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E74B27B61AF43C8100CE4883</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>TEALNetworkHelpers.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E74B27B71AF43C8100CE4883</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>TEALURLSessionManager.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E74B27B81AF43C8100CE4883</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>TEALURLSessionManager.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E74B27B91AF43C8100CE4883</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>E74B27BA1AF43C8100CE4883</string>
+				<string>E74B27C21AF43C8100CE4883</string>
+				<string>E74B27C31AF43C8100CE4883</string>
+				<string>E74B27C41AF43C8100CE4883</string>
+				<string>E74B27C51AF43C8100CE4883</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>profile</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E74B27BA1AF43C8100CE4883</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>E74B27BB1AF43C8100CE4883</string>
+				<string>E74B27BC1AF43C8100CE4883</string>
+				<string>E74B27BD1AF43C8100CE4883</string>
+				<string>E74B27BE1AF43C8100CE4883</string>
+				<string>E74B27BF1AF43C8100CE4883</string>
+				<string>E74B27C01AF43C8100CE4883</string>
+				<string>E74B27C11AF43C8100CE4883</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>model</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E74B27BB1AF43C8100CE4883</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>TEALProfile+PrivateHeader.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E74B27BC1AF43C8100CE4883</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>TEALProfile.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E74B27BD1AF43C8100CE4883</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>TEALProfile.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E74B27BE1AF43C8100CE4883</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>TEALProfileAttribute.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E74B27BF1AF43C8100CE4883</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>TEALProfileAttribute.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E74B27C01AF43C8100CE4883</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>TEALProfileCurrentVisit.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E74B27C11AF43C8100CE4883</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>TEALProfileCurrentVisit.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E74B27C21AF43C8100CE4883</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>TEALProfileHelpers.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E74B27C31AF43C8100CE4883</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>TEALProfileHelpers.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E74B27C41AF43C8100CE4883</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>TEALProfileStore.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E74B27C51AF43C8100CE4883</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>TEALProfileStore.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E74B27C61AF43C8100CE4883</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>E74B27C71AF43C8100CE4883</string>
+				<string>E74B27C81AF43C8100CE4883</string>
+				<string>E74B27C91AF43C8100CE4883</string>
+				<string>E74B27CA1AF43C8100CE4883</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>settings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E74B27C71AF43C8100CE4883</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>TEALSettings.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E74B27C81AF43C8100CE4883</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>TEALSettings.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E74B27C91AF43C8100CE4883</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>TEALSettingsStore.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E74B27CA1AF43C8100CE4883</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>TEALSettingsStore.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E74B27CB1AF43C8100CE4883</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>E74B27CC1AF43C8100CE4883</string>
+				<string>E74B27CD1AF43C8100CE4883</string>
+				<string>E74B27CE1AF43C8100CE4883</string>
+				<string>E74B27CF1AF43C8100CE4883</string>
+				<string>E74B27D01AF43C8100CE4883</string>
+				<string>E74B27D11AF43C8100CE4883</string>
+				<string>E74B27D21AF43C8100CE4883</string>
+				<string>E74B27D31AF43C8100CE4883</string>
+				<string>E74B27D41AF43C8100CE4883</string>
+				<string>E74B27D51AF43C8100CE4883</string>
+				<string>E74B27D61AF43C8100CE4883</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>system</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E74B27CC1AF43C8100CE4883</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>TEALActionQueueManager.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E74B27CD1AF43C8100CE4883</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>TEALActionQueueManager.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E74B27CE1AF43C8100CE4883</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>TEALError.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E74B27CF1AF43C8100CE4883</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>TEALError.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E74B27D01AF43C8100CE4883</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>TEALLogger.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E74B27D11AF43C8100CE4883</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>TEALLogger.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E74B27D21AF43C8100CE4883</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>TEALOperationManager.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E74B27D31AF43C8100CE4883</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>TEALOperationManager.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E74B27D41AF43C8100CE4883</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>TEALSystemHelpers.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E74B27D51AF43C8100CE4883</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>TEALSystemHelpers.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E74B27D61AF43C8100CE4883</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>TEALSystemProtocols.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E74B27D91AF43C8100CE4883</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E74B27AC1AF43C8100CE4883</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E74B27DA1AF43C8100CE4883</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E74B27AE1AF43C8100CE4883</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E74B27DC1AF43C8100CE4883</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E74B27B41AF43C8100CE4883</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E74B27DD1AF43C8100CE4883</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E74B27B61AF43C8100CE4883</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E74B27DE1AF43C8100CE4883</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E74B27B81AF43C8100CE4883</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E74B27DF1AF43C8100CE4883</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E74B27BD1AF43C8100CE4883</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E74B27E01AF43C8100CE4883</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E74B27BF1AF43C8100CE4883</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E74B27E11AF43C8100CE4883</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E74B27C11AF43C8100CE4883</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E74B27E21AF43C8100CE4883</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E74B27C31AF43C8100CE4883</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E74B27E31AF43C8100CE4883</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E74B27C51AF43C8100CE4883</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E74B27E41AF43C8100CE4883</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E74B27C81AF43C8100CE4883</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E74B27E51AF43C8100CE4883</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E74B27CA1AF43C8100CE4883</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E74B27E61AF43C8100CE4883</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E74B27CD1AF43C8100CE4883</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E74B27E71AF43C8100CE4883</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E74B27CF1AF43C8100CE4883</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E74B27E81AF43C8100CE4883</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E74B27D11AF43C8100CE4883</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E74B27E91AF43C8100CE4883</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E74B27D31AF43C8100CE4883</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E74B27EA1AF43C8100CE4883</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E74B27D51AF43C8100CE4883</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E74B27FA1AF8290A00CE4883</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>E74B27FB1AF8290A00CE4883</string>
+				<string>E74B27FC1AF8290A00CE4883</string>
+				<string>E74B27FD1AF8290A00CE4883</string>
+				<string>E74B27FE1AF8290A00CE4883</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>events</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E74B27FB1AF8290A00CE4883</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>TEALAudienceStreamDispatchManager.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E74B27FC1AF8290A00CE4883</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>TEALAudienceStreamDispatchManager.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E74B27FD1AF8290A00CE4883</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>TEALEvent.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E74B27FE1AF8290A00CE4883</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>TEALEvent.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E74B27FF1AF8290A00CE4883</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E74B27FC1AF8290A00CE4883</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E74B28001AF8290A00CE4883</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E74B27FC1AF8290A00CE4883</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E74B28011AF8290A00CE4883</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E74B27FE1AF8290A00CE4883</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E74B28021AF8290A00CE4883</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E74B27FE1AF8290A00CE4883</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E7F2E33F1AAF458100D90835</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>E7F2E36F1AAF464B00D90835</string>
+				<string>E7F2E34A1AAF458100D90835</string>
+				<string>E7F2E3601AAF458100D90835</string>
+				<string>E7F2E3491AAF458100D90835</string>
+				<string>548670E0D91A5B32C1AF235F</string>
+				<string>3089ECAD14416F54BB71048F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E7F2E3401AAF458100D90835</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>LastUpgradeCheck</key>
+				<string>0610</string>
+				<key>ORGANIZATIONNAME</key>
+				<string>Tealium Inc.</string>
+				<key>TargetAttributes</key>
+				<dict>
+					<key>E7F2E3471AAF458100D90835</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>6.1.1</string>
+					</dict>
+					<key>E7F2E35C1AAF458100D90835</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>6.1.1</string>
+						<key>TestTargetID</key>
+						<string>E7F2E3471AAF458100D90835</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>E7F2E3431AAF458100D90835</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+				<string>Base</string>
+			</array>
+			<key>mainGroup</key>
+			<string>E7F2E33F1AAF458100D90835</string>
+			<key>productRefGroup</key>
+			<string>E7F2E3491AAF458100D90835</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>E7F2E3471AAF458100D90835</string>
+				<string>E7F2E35C1AAF458100D90835</string>
+			</array>
+		</dict>
+		<key>E7F2E3431AAF458100D90835</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>E7F2E3651AAF458100D90835</string>
+				<string>E7F2E3661AAF458100D90835</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>E7F2E3441AAF458100D90835</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>E74B27DA1AF43C8100CE4883</string>
+				<string>E74B27E21AF43C8100CE4883</string>
+				<string>E74B27DC1AF43C8100CE4883</string>
+				<string>E74B27E41AF43C8100CE4883</string>
+				<string>E7F2E3BC1AAF464B00D90835</string>
+				<string>E7F2E3BE1AAF464B00D90835</string>
+				<string>E74B27E51AF43C8100CE4883</string>
+				<string>E74B27EA1AF43C8100CE4883</string>
+				<string>E74B27DF1AF43C8100CE4883</string>
+				<string>E74B27E71AF43C8100CE4883</string>
+				<string>E74B28011AF8290A00CE4883</string>
+				<string>E74B27D91AF43C8100CE4883</string>
+				<string>E7F2E3501AAF458100D90835</string>
+				<string>E74B27FF1AF8290A00CE4883</string>
+				<string>E74B27E31AF43C8100CE4883</string>
+				<string>E74B27DD1AF43C8100CE4883</string>
+				<string>E74B27E81AF43C8100CE4883</string>
+				<string>E74B27E61AF43C8100CE4883</string>
+				<string>E74B27DE1AF43C8100CE4883</string>
+				<string>E7F2E34E1AAF458100D90835</string>
+				<string>E74B27E01AF43C8100CE4883</string>
+				<string>E74B27E11AF43C8100CE4883</string>
+				<string>E74B27E91AF43C8100CE4883</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>E7F2E3451AAF458100D90835</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>A91E2C5407FAF6D052996C9F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>E7F2E3461AAF458100D90835</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>E7F2E3531AAF458100D90835</string>
+				<string>E7F2E3581AAF458100D90835</string>
+				<string>E7F2E3551AAF458100D90835</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>E7F2E3471AAF458100D90835</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>E7F2E3671AAF458100D90835</string>
+			<key>buildPhases</key>
+			<array>
+				<string>7806C52D167B3EDBE7E21966</string>
+				<string>E7F2E3441AAF458100D90835</string>
+				<string>E7F2E3451AAF458100D90835</string>
+				<string>E7F2E3461AAF458100D90835</string>
+				<string>108549D56B8197399024B868</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>ASTester</string>
+			<key>productName</key>
+			<string>ASTester</string>
+			<key>productReference</key>
+			<string>E7F2E3481AAF458100D90835</string>
+			<key>productType</key>
+			<string>com.apple.product-type.application</string>
+		</dict>
+		<key>E7F2E3481AAF458100D90835</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.application</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>ASTester.app</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>E7F2E3491AAF458100D90835</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>E7F2E3481AAF458100D90835</string>
+				<string>E7F2E35D1AAF458100D90835</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E7F2E34A1AAF458100D90835</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>E7F2E4011AAF479A00D90835</string>
+				<string>E7F2E34D1AAF458100D90835</string>
+				<string>E7F2E34F1AAF458100D90835</string>
+				<string>E7F2E3511AAF458100D90835</string>
+				<string>E7F2E3541AAF458100D90835</string>
+				<string>E7F2E3561AAF458100D90835</string>
+				<string>E7F2E34B1AAF458100D90835</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>ASTester</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E7F2E34B1AAF458100D90835</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>E7F2E34C1AAF458100D90835</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E7F2E34C1AAF458100D90835</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E7F2E34D1AAF458100D90835</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>AppDelegate.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E7F2E34E1AAF458100D90835</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E7F2E34D1AAF458100D90835</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E7F2E34F1AAF458100D90835</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>TestMenuViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E7F2E3501AAF458100D90835</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E7F2E34F1AAF458100D90835</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E7F2E3511AAF458100D90835</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>E7F2E3521AAF458100D90835</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>Main.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E7F2E3521AAF458100D90835</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/Main.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E7F2E3531AAF458100D90835</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E7F2E3511AAF458100D90835</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E7F2E3541AAF458100D90835</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>folder.assetcatalog</string>
+			<key>path</key>
+			<string>Images.xcassets</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E7F2E3551AAF458100D90835</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E7F2E3541AAF458100D90835</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E7F2E3561AAF458100D90835</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>E7F2E3571AAF458100D90835</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>LaunchScreen.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E7F2E3571AAF458100D90835</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/LaunchScreen.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E7F2E3581AAF458100D90835</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E7F2E3561AAF458100D90835</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E7F2E3591AAF458100D90835</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>E74B28001AF8290A00CE4883</string>
+				<string>E7F2E3BD1AAF464B00D90835</string>
+				<string>E74B28021AF8290A00CE4883</string>
+				<string>E7F2E3641AAF458100D90835</string>
+				<string>E7F2E3BF1AAF464B00D90835</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>E7F2E35A1AAF458100D90835</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>64EDAF97F11C4C0D9B9CCF79</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>E7F2E35B1AAF458100D90835</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>E7F2E35C1AAF458100D90835</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>E7F2E36A1AAF458100D90835</string>
+			<key>buildPhases</key>
+			<array>
+				<string>AB83F07671586E77F5C5A254</string>
+				<string>E7F2E3591AAF458100D90835</string>
+				<string>E7F2E35A1AAF458100D90835</string>
+				<string>E7F2E35B1AAF458100D90835</string>
+				<string>15F81025AC5A75A67AC82EA0</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>E7F2E35F1AAF458100D90835</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>ASTesterTests</string>
+			<key>productName</key>
+			<string>ASTesterTests</string>
+			<key>productReference</key>
+			<string>E7F2E35D1AAF458100D90835</string>
+			<key>productType</key>
+			<string>com.apple.product-type.bundle.unit-test</string>
+		</dict>
+		<key>E7F2E35D1AAF458100D90835</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.cfbundle</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>ASTesterTests.xctest</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>E7F2E35E1AAF458100D90835</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>E7F2E3401AAF458100D90835</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>E7F2E3471AAF458100D90835</string>
+			<key>remoteInfo</key>
+			<string>ASTester</string>
+		</dict>
+		<key>E7F2E35F1AAF458100D90835</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>E7F2E3471AAF458100D90835</string>
+			<key>targetProxy</key>
+			<string>E7F2E35E1AAF458100D90835</string>
+		</dict>
+		<key>E7F2E3601AAF458100D90835</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>E7F2E3631AAF458100D90835</string>
+				<string>E7F2E3611AAF458100D90835</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>ASTesterTests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E7F2E3611AAF458100D90835</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>E7F2E3621AAF458100D90835</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E7F2E3621AAF458100D90835</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E7F2E3631AAF458100D90835</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>ASTesterTests.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E7F2E3641AAF458100D90835</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E7F2E3631AAF458100D90835</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E7F2E3651AAF458100D90835</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.1</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SWIFT_OPTIMIZATION_LEVEL</key>
+				<string>-Onone</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>E7F2E3661AAF458100D90835</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.1</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>E7F2E3671AAF458100D90835</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>E7F2E3681AAF458100D90835</string>
+				<string>E7F2E3691AAF458100D90835</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>E7F2E3681AAF458100D90835</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>FF603392B9EBD688354B0CE6</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>INFOPLIST_FILE</key>
+				<string>ASTester/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SWIFT_OBJC_BRIDGING_HEADER</key>
+				<string>ASTester/ASTester-Bridging-Header.h</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>E7F2E3691AAF458100D90835</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>C140CD375B8DE9B69F3EFD27</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>INFOPLIST_FILE</key>
+				<string>ASTester/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SWIFT_OBJC_BRIDGING_HEADER</key>
+				<string>ASTester/ASTester-Bridging-Header.h</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>E7F2E36A1AAF458100D90835</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>E7F2E36B1AAF458100D90835</string>
+				<string>E7F2E36C1AAF458100D90835</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>E7F2E36B1AAF458100D90835</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>669CA48DE7214C25C746CED1</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(TEST_HOST)</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>INFOPLIST_FILE</key>
+				<string>ASTesterTests/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUILT_PRODUCTS_DIR)/ASTester.app/ASTester</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>E7F2E36C1AAF458100D90835</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>E282695FAC3C0E853E0DB22C</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(TEST_HOST)</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>INFOPLIST_FILE</key>
+				<string>ASTesterTests/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUILT_PRODUCTS_DIR)/ASTester.app/ASTester</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>E7F2E36F1AAF464B00D90835</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>E74B27FA1AF8290A00CE4883</string>
+				<string>E74B27AA1AF43C8100CE4883</string>
+				<string>E74B27B21AF43C8100CE4883</string>
+				<string>E74B27B91AF43C8100CE4883</string>
+				<string>E74B27C61AF43C8100CE4883</string>
+				<string>E74B27CB1AF43C8100CE4883</string>
+				<string>E7F2E3971AAF464B00D90835</string>
+				<string>E7F2E3981AAF464B00D90835</string>
+				<string>E7F2E3991AAF464B00D90835</string>
+				<string>E7F2E39A1AAF464B00D90835</string>
+				<string>E7F2E39B1AAF464B00D90835</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>AudienceStream</string>
+			<key>path</key>
+			<string>../../../AudienceStream</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E7F2E3971AAF464B00D90835</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>TEALAudienceSteam-Bridging-Header.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E7F2E3981AAF464B00D90835</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>TEALAudienceStream.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E7F2E3991AAF464B00D90835</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>TEALAudienceStream.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E7F2E39A1AAF464B00D90835</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>TEALAudienceStreamConfiguration.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E7F2E39B1AAF464B00D90835</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>TEALAudienceStreamConfiguration.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E7F2E3BC1AAF464B00D90835</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E7F2E3991AAF464B00D90835</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E7F2E3BD1AAF464B00D90835</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E7F2E3991AAF464B00D90835</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E7F2E3BE1AAF464B00D90835</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E7F2E39B1AAF464B00D90835</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E7F2E3BF1AAF464B00D90835</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E7F2E39B1AAF464B00D90835</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E7F2E4011AAF479A00D90835</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>ASTester-Bridging-Header.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>FF603392B9EBD688354B0CE6</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-ASTester.debug.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-ASTester/Pods-ASTester.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>E7F2E3401AAF458100D90835</string>
+</dict>
+</plist>

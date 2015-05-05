@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        let configuration = TEALAudienceStreamConfiguration(account: "tealiummobile", profile: "ios-demo", environment: "dev")
+        let configuration = TEALAudienceStreamConfiguration(account: "tealiummobile", profile: "demo", environment: "dev")
         
         configuration.logLevel = TEALAudienceStreamLogLevel.Verbose
         
