@@ -11,11 +11,11 @@
 #import "TEALNetworkHelpers.h"
 #import "TEALURLSessionManager.h"
 
-#import "TEALDispatchConstants.h"
-#import "TEALDispatch.h"
-#import "TEALDispatchManager.h"
+#import <TealiumUtilities/TEALDispatchConstants.h>
+#import <TealiumUtilities/TEALDispatch.h>
+#import <TealiumUtilities/TEALDispatchManager.h>
 
-#import "TEALBlocks.h"
+#import <TealiumUtilities/TEALBlocks.h>
 
 #import "TEALLogger.h"
 

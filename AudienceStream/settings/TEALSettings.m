@@ -9,7 +9,7 @@
 #import "TEALSettings.h"
 #import "TEALSystemHelpers.h"
 #import "TEALNetworkHelpers.h"
-#import "NSString+TealiumAdditions.h"
+#import <TealiumUtilities/NSString+TealiumAdditions.h>
 #import "TEALAudienceStreamConfiguration.h"
 
 #import "TEALLogger.h"

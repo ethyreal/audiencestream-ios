@@ -11,8 +11,8 @@
 #import <UIKit/UIDevice.h>
 #import "TEALSystemHelpers.h"
 #import "TEALNetworkHelpers.h"
-#import "NSDate+TealiumAdditions.h"
-#import "NSString+TealiumAdditions.h"
+#import <TealiumUtilities/NSDate+TealiumAdditions.h>
+#import <TealiumUtilities/NSString+TealiumAdditions.h>
 
 static NSString * const kTEALAudienceStreamDatasourceStorageKey = @"com.tealium.audiencestream.datasources";
 

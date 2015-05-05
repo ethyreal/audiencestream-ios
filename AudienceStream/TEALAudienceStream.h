@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "TEALProfile.h"
 #import "TEALAudienceStreamConfiguration.h"
-#import "TEALBlocks.h"
+#import <TealiumUtilities/TEALBlocks.h>
 #import "TEALEvent.h"
 
 @interface TEALAudienceStream : NSObject

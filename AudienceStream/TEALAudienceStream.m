@@ -32,7 +32,7 @@
 // Datasources
 
 #import "TEALAudienceStreamDatasources.h"
-#import "TEALDataSourceStore.h"
+#import <TealiumUtilities/TEALDataSourceStore.h>
 #import "TEALDatasourceStore+TEALAudienceStreamAdditions.h"
 
 // Profile

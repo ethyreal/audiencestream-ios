@@ -8,7 +8,7 @@
 
 #import "TEALActionQueueManager.h"
 
-#import "TEALDataQueue.h"
+#import <TealiumUtilities/TEALDataQueue.h>
 
 @interface TEALActionQueueManager ()
 

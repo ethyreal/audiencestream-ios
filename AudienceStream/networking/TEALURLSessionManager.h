@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-#import "TEALReachabilityManager.h"
+#import <TealiumUtilities/TEALReachabilityManager.h>
 
-#import "TEALBlocks.h"
+#import <TealiumUtilities/TEALBlocks.h>
 
 @interface TEALURLSessionManager : NSObject
 

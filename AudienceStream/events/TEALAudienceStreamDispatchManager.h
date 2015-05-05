@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "TEALDispatchConstants.h"
+#import <TealiumUtilities/TEALDispatchConstants.h>
 #import "TEALSystemProtocols.h"
 #import "TEALEvent.h"
 

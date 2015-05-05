@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Tealium Inc. All rights reserved.
 //
 
-#import "TEALDatasourceStore.h"
+#import <TealiumUtilities/TEALDatasourceStore.h>
 #import "TEALAudienceStreamDatasources.h"
 #import "TEALEvent.h"
 
