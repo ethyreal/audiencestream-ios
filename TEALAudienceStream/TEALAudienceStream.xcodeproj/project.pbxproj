@@ -50,6 +50,8 @@
 		37646EFE1AFD2342003EF4D2 /* TEALAudienceStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 37646ED41AFD2342003EF4D2 /* TEALAudienceStream.m */; };
 		37646EFF1AFD2342003EF4D2 /* TEALAudienceStreamConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 37646ED61AFD2342003EF4D2 /* TEALAudienceStreamConfiguration.m */; };
 		37646F001AFD2342003EF4D2 /* TEALAudienceStreamConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 37646ED61AFD2342003EF4D2 /* TEALAudienceStreamConfiguration.m */; };
+		37646F021AFD266D003EF4D2 /* libPods-TEALAudienceStream-TealiumUtilities.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 37646F011AFD266D003EF4D2 /* libPods-TEALAudienceStream-TealiumUtilities.a */; };
+		37646F041AFD267B003EF4D2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37646F031AFD267B003EF4D2 /* UIKit.framework */; };
 		AEF266F6FA36993696B4C45D /* libPods-TEALAudienceStream.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B683218FD7592DB39CEAC3E /* libPods-TEALAudienceStream.a */; };
 		DA1BA427D3E09C92BC795C48 /* libPods-TEALAudienceStreamTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ED5B617BC049A94E5458299 /* libPods-TEALAudienceStreamTests.a */; };
 /* End PBXBuildFile section */
@@ -128,6 +130,8 @@
 		37646ED41AFD2342003EF4D2 /* TEALAudienceStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TEALAudienceStream.m; sourceTree = "<group>"; };
 		37646ED51AFD2342003EF4D2 /* TEALAudienceStreamConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TEALAudienceStreamConfiguration.h; sourceTree = "<group>"; };
 		37646ED61AFD2342003EF4D2 /* TEALAudienceStreamConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TEALAudienceStreamConfiguration.m; sourceTree = "<group>"; };
+		37646F011AFD266D003EF4D2 /* libPods-TEALAudienceStream-TealiumUtilities.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-TEALAudienceStream-TealiumUtilities.a"; path = "Pods/../build/Debug-iphoneos/libPods-TEALAudienceStream-TealiumUtilities.a"; sourceTree = "<group>"; };
+		37646F031AFD267B003EF4D2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3B683218FD7592DB39CEAC3E /* libPods-TEALAudienceStream.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TEALAudienceStream.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7748203C2E47A563B76ABF8F /* Pods-TEALAudienceStreamTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TEALAudienceStreamTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TEALAudienceStreamTests/Pods-TEALAudienceStreamTests.release.xcconfig"; sourceTree = "<group>"; };
 		9ED5B617BC049A94E5458299 /* libPods-TEALAudienceStreamTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TEALAudienceStreamTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,6 +143,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37646F041AFD267B003EF4D2 /* UIKit.framework in Frameworks */,
+				37646F021AFD266D003EF4D2 /* libPods-TEALAudienceStream-TealiumUtilities.a in Frameworks */,
 				AEF266F6FA36993696B4C45D /* libPods-TEALAudienceStream.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,6 +309,8 @@
 		869ED6D475FAA2740B844C08 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				37646F031AFD267B003EF4D2 /* UIKit.framework */,
+				37646F011AFD266D003EF4D2 /* libPods-TEALAudienceStream-TealiumUtilities.a */,
 				3B683218FD7592DB39CEAC3E /* libPods-TEALAudienceStream.a */,
 				9ED5B617BC049A94E5458299 /* libPods-TEALAudienceStreamTests.a */,
 			);
@@ -620,6 +628,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3375BC6392A572077D7CC478 /* Pods-TEALAudienceStream.debug.xcconfig */;
 			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -633,6 +645,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AF0B42AE718997BD1546F2AD /* Pods-TEALAudienceStream.release.xcconfig */;
 			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
