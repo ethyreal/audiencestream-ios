@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>AF0A4536-1834-4D1F-8A0C-B47548F42392</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>722693398A8BC0DA20347C9A1D8D2D18F5708683</key>
+		<string>https://github.com/ethyreal/audiencestream-ios.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>TEALAudienceStream/TEALAudienceStream.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>722693398A8BC0DA20347C9A1D8D2D18F5708683</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/ethyreal/audiencestream-ios.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>722693398A8BC0DA20347C9A1D8D2D18F5708683</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>722693398A8BC0DA20347C9A1D8D2D18F5708683</string>
+			<key>IDESourceControlWCCName</key>
+			<string>audiencestream-ios</string>
+		</dict>
+	</array>
+</dict>
+</plist>

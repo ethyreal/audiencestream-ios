@@ -1,0 +1,10 @@
+PODS:
+  - TealiumUtilities (1.2)
+
+DEPENDENCIES:
+  - TealiumUtilities
+
+SPEC CHECKSUMS:
+  TealiumUtilities: 258d804b0526ef05e10ee68de38aacd73b34b1d7
+
+COCOAPODS: 0.36.1
