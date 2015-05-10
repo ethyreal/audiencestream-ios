@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "TEALBlocks.h"
+#import <TealiumUtilities/TEALBlocks.h>
 #import "TEALProfileHelpers.h"
 
 #import "TEALProfileDelegate.h"

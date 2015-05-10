@@ -7,7 +7,7 @@
 //
 
 #import "TEALProfileAttribute.h"
-#import "NSString+TealiumAdditions.h"
+#import <TealiumUtilities/NSString+TealiumAdditions.h>
 
 @interface TEALProfileAttribute()
 

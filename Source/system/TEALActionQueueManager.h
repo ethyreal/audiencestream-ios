@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "TEALBlocks.h"
+#import <TealiumUtilities/TEALBlocks.h>
 
 @interface TEALActionQueueManager : NSObject
 
