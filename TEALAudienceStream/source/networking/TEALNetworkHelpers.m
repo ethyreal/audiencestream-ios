@@ -7,6 +7,7 @@
 //
 
 #import "TEALNetworkHelpers.h"
+#import <TealiumUtilities/NSObject+TealiumAdditions.h>
 
 @implementation TEALNetworkHelpers
 
@@ -19,7 +20,8 @@
     
     [data enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
         
-        NSString *escapedValue = [self percentEscapeURLParameter:obj];
+        NSString *stringValue = [obj teal_stringValue];
+        NSString *escapedValue = [self percentEscapeURLParameter:stringValue];
         NSString *paramStr = [NSString stringWithFormat:@"%@=%@", key, escapedValue];
         [paramArray addObject:paramStr];
     }];
@@ -35,6 +37,10 @@
 }
 
 + (NSString *) percentEscapeURLParameter:(NSString *)string {
+    
+    if (!string) {
+        return nil;
+    }
     
     return CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,
                                                                      (CFStringRef)string,
