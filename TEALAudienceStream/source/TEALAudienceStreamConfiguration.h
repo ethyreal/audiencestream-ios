@@ -35,6 +35,15 @@ typedef NS_ENUM(NSUInteger, TEALAudienceStreamLogLevel) {
 
 @property (copy, nonatomic) NSString *audienceStreamProfile;
 
+/**
+ *  Creates a default configration instance for a given account / profile / environment combination.  The TiQ information is used to fetch the profile's mobile publish settings used
+ *
+ *  @param accountName     String of TiQ / AudienceStream account name
+ *  @param profileName     String of TiQ Profile Name
+ *  @param environmentName String
+ *
+ *  @return Valid configuration instance to pass to the enableWithConfiguration: method.
+ */
 + (instancetype) configurationWithAccount:(NSString *)accountName
                                   profile:(NSString *)profileName
                               environment:(NSString *)environmentName;

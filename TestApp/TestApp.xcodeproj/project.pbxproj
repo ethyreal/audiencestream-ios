@@ -1,0 +1,559 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		37570C9E1B02A4F20017B07E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 37570C9D1B02A4F20017B07E /* main.m */; };
+		37570CA11B02A4F20017B07E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 37570CA01B02A4F20017B07E /* AppDelegate.m */; };
+		37570CA41B02A4F20017B07E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37570CA31B02A4F20017B07E /* ViewController.m */; };
+		37570CA71B02A4F20017B07E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37570CA51B02A4F20017B07E /* Main.storyboard */; };
+		37570CA91B02A4F20017B07E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37570CA81B02A4F20017B07E /* Images.xcassets */; };
+		37570CAC1B02A4F20017B07E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37570CAA1B02A4F20017B07E /* LaunchScreen.xib */; };
+		37570CB81B02A4F20017B07E /* TestAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 37570CB71B02A4F20017B07E /* TestAppTests.m */; };
+		37570D091B02A78C0017B07E /* TEALAudienceStream_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 37570D051B02A78C0017B07E /* TEALAudienceStream_Tests.m */; };
+		37570D0A1B02A78C0017B07E /* TealAudienceStreamDispatchManager_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 37570D071B02A78C0017B07E /* TealAudienceStreamDispatchManager_Tests.m */; };
+		37570D0B1B02A78C0017B07E /* TEALSettingsStore_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 37570D081B02A78C0017B07E /* TEALSettingsStore_Tests.m */; };
+		37570D2B1B02B16F0017B07E /* libTEALAudienceStream copy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 37570D2A1B02B1250017B07E /* libTEALAudienceStream copy.a */; };
+		37570D2D1B02B1810017B07E /* TealiumUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37570D2C1B02B1810017B07E /* TealiumUtilities.framework */; };
+		37570D2F1B02B18E0017B07E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37570D2E1B02B18E0017B07E /* SystemConfiguration.framework */; };
+		37570D331B02D3A00017B07E /* libTEALAudienceStream copy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 37570D2A1B02B1250017B07E /* libTEALAudienceStream copy.a */; };
+		37570D3A1B02D4810017B07E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37570D2E1B02B18E0017B07E /* SystemConfiguration.framework */; };
+		37570D3B1B02D4930017B07E /* TealiumUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37570D2C1B02B1810017B07E /* TealiumUtilities.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		37570CB21B02A4F20017B07E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 37570C901B02A4F20017B07E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 37570C971B02A4F20017B07E;
+			remoteInfo = TestApp;
+		};
+		37570D251B02B1250017B07E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 37570CC11B02A52F0017B07E /* TEALAudienceStream.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 372275711AFEA1840038DDDD;
+			remoteInfo = TEALAudienceStream;
+		};
+		37570D271B02B1250017B07E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 37570CC11B02A52F0017B07E /* TEALAudienceStream.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3722757C1AFEA1840038DDDD;
+			remoteInfo = TEALAudienceStreamTests;
+		};
+		37570D291B02B1250017B07E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 37570CC11B02A52F0017B07E /* TEALAudienceStream.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 37570D041B02A6100017B07E;
+			remoteInfo = "TEALAudienceStream-Tests";
+		};
+		37570D311B02D3750017B07E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 37570CC11B02A52F0017B07E /* TEALAudienceStream.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 37570CCC1B02A6100017B07E;
+			remoteInfo = "TEALAudienceStream-Tests";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		37570C981B02A4F20017B07E /* TestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		37570C9C1B02A4F20017B07E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37570C9D1B02A4F20017B07E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		37570C9F1B02A4F20017B07E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		37570CA01B02A4F20017B07E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		37570CA21B02A4F20017B07E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		37570CA31B02A4F20017B07E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		37570CA61B02A4F20017B07E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		37570CA81B02A4F20017B07E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		37570CAB1B02A4F20017B07E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		37570CB11B02A4F20017B07E /* TestAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		37570CB61B02A4F20017B07E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37570CB71B02A4F20017B07E /* TestAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestAppTests.m; sourceTree = "<group>"; };
+		37570CC11B02A52F0017B07E /* TEALAudienceStream.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TEALAudienceStream.xcodeproj; path = ../TEALAudienceStream/TEALAudienceStream.xcodeproj; sourceTree = "<group>"; };
+		37570D051B02A78C0017B07E /* TEALAudienceStream_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TEALAudienceStream_Tests.m; sourceTree = "<group>"; };
+		37570D061B02A78C0017B07E /* TEALAudienceStream+PrivateHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TEALAudienceStream+PrivateHeader.h"; sourceTree = "<group>"; };
+		37570D071B02A78C0017B07E /* TealAudienceStreamDispatchManager_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TealAudienceStreamDispatchManager_Tests.m; sourceTree = "<group>"; };
+		37570D081B02A78C0017B07E /* TEALSettingsStore_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TEALSettingsStore_Tests.m; sourceTree = "<group>"; };
+		37570D2C1B02B1810017B07E /* TealiumUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TealiumUtilities.framework; path = ../Release/TealiumUtilities.framework; sourceTree = "<group>"; };
+		37570D2E1B02B18E0017B07E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		37570C951B02A4F20017B07E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37570D2D1B02B1810017B07E /* TealiumUtilities.framework in Frameworks */,
+				37570D2F1B02B18E0017B07E /* SystemConfiguration.framework in Frameworks */,
+				37570D2B1B02B16F0017B07E /* libTEALAudienceStream copy.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37570CAE1B02A4F20017B07E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37570D3B1B02D4930017B07E /* TealiumUtilities.framework in Frameworks */,
+				37570D3A1B02D4810017B07E /* SystemConfiguration.framework in Frameworks */,
+				37570D331B02D3A00017B07E /* libTEALAudienceStream copy.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		37570C8F1B02A4F20017B07E = {
+			isa = PBXGroup;
+			children = (
+				37570D2E1B02B18E0017B07E /* SystemConfiguration.framework */,
+				37570D2C1B02B1810017B07E /* TealiumUtilities.framework */,
+				37570CCB1B02A5390017B07E /* AudienceStream */,
+				37570C9A1B02A4F20017B07E /* TestApp */,
+				37570CB41B02A4F20017B07E /* TestAppTests */,
+				37570C991B02A4F20017B07E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		37570C991B02A4F20017B07E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				37570C981B02A4F20017B07E /* TestApp.app */,
+				37570CB11B02A4F20017B07E /* TestAppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		37570C9A1B02A4F20017B07E /* TestApp */ = {
+			isa = PBXGroup;
+			children = (
+				37570C9F1B02A4F20017B07E /* AppDelegate.h */,
+				37570CA01B02A4F20017B07E /* AppDelegate.m */,
+				37570CA21B02A4F20017B07E /* ViewController.h */,
+				37570CA31B02A4F20017B07E /* ViewController.m */,
+				37570CA51B02A4F20017B07E /* Main.storyboard */,
+				37570CA81B02A4F20017B07E /* Images.xcassets */,
+				37570CAA1B02A4F20017B07E /* LaunchScreen.xib */,
+				37570C9B1B02A4F20017B07E /* Supporting Files */,
+			);
+			path = TestApp;
+			sourceTree = "<group>";
+		};
+		37570C9B1B02A4F20017B07E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				37570C9C1B02A4F20017B07E /* Info.plist */,
+				37570C9D1B02A4F20017B07E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		37570CB41B02A4F20017B07E /* TestAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				37570CB71B02A4F20017B07E /* TestAppTests.m */,
+				37570D051B02A78C0017B07E /* TEALAudienceStream_Tests.m */,
+				37570D061B02A78C0017B07E /* TEALAudienceStream+PrivateHeader.h */,
+				37570D071B02A78C0017B07E /* TealAudienceStreamDispatchManager_Tests.m */,
+				37570D081B02A78C0017B07E /* TEALSettingsStore_Tests.m */,
+				37570CB51B02A4F20017B07E /* Supporting Files */,
+			);
+			path = TestAppTests;
+			sourceTree = "<group>";
+		};
+		37570CB51B02A4F20017B07E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				37570CB61B02A4F20017B07E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		37570CCB1B02A5390017B07E /* AudienceStream */ = {
+			isa = PBXGroup;
+			children = (
+				37570CC11B02A52F0017B07E /* TEALAudienceStream.xcodeproj */,
+			);
+			name = AudienceStream;
+			sourceTree = "<group>";
+		};
+		37570D1F1B02B1250017B07E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				37570D261B02B1250017B07E /* libTEALAudienceStream.a */,
+				37570D281B02B1250017B07E /* TEALAudienceStreamTests.xctest */,
+				37570D2A1B02B1250017B07E /* libTEALAudienceStream copy.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		37570C971B02A4F20017B07E /* TestApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37570CBB1B02A4F20017B07E /* Build configuration list for PBXNativeTarget "TestApp" */;
+			buildPhases = (
+				37570C941B02A4F20017B07E /* Sources */,
+				37570C951B02A4F20017B07E /* Frameworks */,
+				37570C961B02A4F20017B07E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				37570D321B02D3750017B07E /* PBXTargetDependency */,
+			);
+			name = TestApp;
+			productName = TestApp;
+			productReference = 37570C981B02A4F20017B07E /* TestApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		37570CB01B02A4F20017B07E /* TestAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37570CBE1B02A4F20017B07E /* Build configuration list for PBXNativeTarget "TestAppTests" */;
+			buildPhases = (
+				37570CAD1B02A4F20017B07E /* Sources */,
+				37570CAE1B02A4F20017B07E /* Frameworks */,
+				37570CAF1B02A4F20017B07E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				37570CB31B02A4F20017B07E /* PBXTargetDependency */,
+			);
+			name = TestAppTests;
+			productName = TestAppTests;
+			productReference = 37570CB11B02A4F20017B07E /* TestAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		37570C901B02A4F20017B07E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Tealium Inc.";
+				TargetAttributes = {
+					37570C971B02A4F20017B07E = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					37570CB01B02A4F20017B07E = {
+						CreatedOnToolsVersion = 6.3.1;
+						TestTargetID = 37570C971B02A4F20017B07E;
+					};
+				};
+			};
+			buildConfigurationList = 37570C931B02A4F20017B07E /* Build configuration list for PBXProject "TestApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 37570C8F1B02A4F20017B07E;
+			productRefGroup = 37570C991B02A4F20017B07E /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 37570D1F1B02B1250017B07E /* Products */;
+					ProjectRef = 37570CC11B02A52F0017B07E /* TEALAudienceStream.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				37570C971B02A4F20017B07E /* TestApp */,
+				37570CB01B02A4F20017B07E /* TestAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		37570D261B02B1250017B07E /* libTEALAudienceStream.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libTEALAudienceStream.a;
+			remoteRef = 37570D251B02B1250017B07E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		37570D281B02B1250017B07E /* TEALAudienceStreamTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = TEALAudienceStreamTests.xctest;
+			remoteRef = 37570D271B02B1250017B07E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		37570D2A1B02B1250017B07E /* libTEALAudienceStream copy.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libTEALAudienceStream copy.a";
+			remoteRef = 37570D291B02B1250017B07E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		37570C961B02A4F20017B07E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37570CA71B02A4F20017B07E /* Main.storyboard in Resources */,
+				37570CAC1B02A4F20017B07E /* LaunchScreen.xib in Resources */,
+				37570CA91B02A4F20017B07E /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37570CAF1B02A4F20017B07E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		37570C941B02A4F20017B07E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37570CA41B02A4F20017B07E /* ViewController.m in Sources */,
+				37570CA11B02A4F20017B07E /* AppDelegate.m in Sources */,
+				37570C9E1B02A4F20017B07E /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37570CAD1B02A4F20017B07E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37570CB81B02A4F20017B07E /* TestAppTests.m in Sources */,
+				37570D091B02A78C0017B07E /* TEALAudienceStream_Tests.m in Sources */,
+				37570D0B1B02A78C0017B07E /* TEALSettingsStore_Tests.m in Sources */,
+				37570D0A1B02A78C0017B07E /* TealAudienceStreamDispatchManager_Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		37570CB31B02A4F20017B07E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 37570C971B02A4F20017B07E /* TestApp */;
+			targetProxy = 37570CB21B02A4F20017B07E /* PBXContainerItemProxy */;
+		};
+		37570D321B02D3750017B07E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "TEALAudienceStream-Tests";
+			targetProxy = 37570D311B02D3750017B07E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		37570CA51B02A4F20017B07E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				37570CA61B02A4F20017B07E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		37570CAA1B02A4F20017B07E /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				37570CAB1B02A4F20017B07E /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		37570CB91B02A4F20017B07E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		37570CBA1B02A4F20017B07E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		37570CBC1B02A4F20017B07E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/ethyreal/Documents/ios/tealium/audiencestream-ios/Release",
+				);
+				INFOPLIST_FILE = TestApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		37570CBD1B02A4F20017B07E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/ethyreal/Documents/ios/tealium/audiencestream-ios/Release",
+				);
+				INFOPLIST_FILE = TestApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		37570CBF1B02A4F20017B07E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"/Users/ethyreal/Documents/ios/tealium/audiencestream-ios/Release",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TestAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestApp.app/TestApp";
+			};
+			name = Debug;
+		};
+		37570CC01B02A4F20017B07E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"/Users/ethyreal/Documents/ios/tealium/audiencestream-ios/Release",
+				);
+				INFOPLIST_FILE = TestAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestApp.app/TestApp";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		37570C931B02A4F20017B07E /* Build configuration list for PBXProject "TestApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37570CB91B02A4F20017B07E /* Debug */,
+				37570CBA1B02A4F20017B07E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		37570CBB1B02A4F20017B07E /* Build configuration list for PBXNativeTarget "TestApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37570CBC1B02A4F20017B07E /* Debug */,
+				37570CBD1B02A4F20017B07E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		37570CBE1B02A4F20017B07E /* Build configuration list for PBXNativeTarget "TestAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37570CBF1B02A4F20017B07E /* Debug */,
+				37570CC01B02A4F20017B07E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 37570C901B02A4F20017B07E /* Project object */;
+}

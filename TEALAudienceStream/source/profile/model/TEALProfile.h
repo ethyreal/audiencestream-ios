@@ -12,21 +12,70 @@
 
 @interface TEALProfile : NSObject <NSCoding, NSCopying>
 
-@property (copy, readonly) NSString *visitorID;
+/**
+ *  Valid flag for Profile instance
+ *
+ *  @return YES if visitorID is valid, otherwise NO
+ */
+- (BOOL) isValid;
 
-@property (readonly, nonatomic) BOOL isValid;
+/**
+ *  Visitor ID addociated with this profile
+ *
+ *  @return String representation of user's vistorID
+ */
+- (NSString *) visitorID;
 
-@property (readonly, nonatomic) NSDictionary *rawProfile;
+/**
+ *  Audiences this visitor's profile is associated with.
+ *
+ *  @return Array of TEALProfileAudienceAttribute objects or nil if none exist
+ */
+- (NSArray *) audiences;
 
-@property (readonly, nonatomic) NSArray *audiences;
-@property (readonly, nonatomic) NSArray *badges;
-@property (readonly, nonatomic) NSArray *dates;
-@property (readonly, nonatomic) NSArray *flags;
-@property (readonly, nonatomic) NSArray *metrics;
-@property (readonly, nonatomic) NSArray *properties;
+/**
+ *  Badges this visitor's profile is associated with.
+ *
+ *  @return Array of TEALProfileBadgeAttribute objects or nil if none exist
+ */
+- (NSArray *) badges;
+
+/**
+ *  Dates this visitor's profile is associated with.
+ *
+ *  @return Array of TEALProfileDateAttribute objects or nil if none exist
+ */
+- (NSArray *) dates;
+
+/**
+ *  Flags this visitor's profile is associated with.
+ *
+ *  @return Array of TEALProfileFlagAttribute objects or nil if none exist
+ */
+- (NSArray *) flags;
+
+/**
+ *  Metrics this visitor's profile is associated with.
+ *
+ *  @return Array of TEALProfileMetricAttribute objects or nil if none exist
+ */
+- (NSArray *) metrics;
+
+/**
+ *  Properties or "Traits" this visitor's profile is associated with.
+ *
+ *  @return Array of TEALProfilePropertyAttribute objects or nil if none exist
+ */
+- (NSArray *) properties;
 
 @property (readonly, nonatomic) TEALProfileCurrentVisit *currentVisit;
 
-- (instancetype) initWithVisitorID:(NSString *)visitorID;
+
+/**
+ *  Raw profile returned from AudienceStream.  JSON object converted to valid native objects
+ *
+ *  @return NSDictionary of raw profile objects
+ */
+- (NSDictionary *) rawProfile;
 
 @end
