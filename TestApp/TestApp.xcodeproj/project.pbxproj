@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		37570C9E1B02A4F20017B07E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 37570C9D1B02A4F20017B07E /* main.m */; };
 		37570CA11B02A4F20017B07E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 37570CA01B02A4F20017B07E /* AppDelegate.m */; };
-		37570CA41B02A4F20017B07E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37570CA31B02A4F20017B07E /* ViewController.m */; };
 		37570CA71B02A4F20017B07E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37570CA51B02A4F20017B07E /* Main.storyboard */; };
 		37570CA91B02A4F20017B07E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37570CA81B02A4F20017B07E /* Images.xcassets */; };
 		37570CAC1B02A4F20017B07E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37570CAA1B02A4F20017B07E /* LaunchScreen.xib */; };
@@ -17,12 +16,14 @@
 		37570D091B02A78C0017B07E /* TEALAudienceStream_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 37570D051B02A78C0017B07E /* TEALAudienceStream_Tests.m */; };
 		37570D0A1B02A78C0017B07E /* TealAudienceStreamDispatchManager_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 37570D071B02A78C0017B07E /* TealAudienceStreamDispatchManager_Tests.m */; };
 		37570D0B1B02A78C0017B07E /* TEALSettingsStore_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 37570D081B02A78C0017B07E /* TEALSettingsStore_Tests.m */; };
-		37570D2B1B02B16F0017B07E /* libTEALAudienceStream copy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 37570D2A1B02B1250017B07E /* libTEALAudienceStream copy.a */; };
+		37570D2B1B02B16F0017B07E /* libTEALAudienceStream-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 37570D2A1B02B1250017B07E /* libTEALAudienceStream-Tests.a */; };
 		37570D2D1B02B1810017B07E /* TealiumUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37570D2C1B02B1810017B07E /* TealiumUtilities.framework */; };
 		37570D2F1B02B18E0017B07E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37570D2E1B02B18E0017B07E /* SystemConfiguration.framework */; };
-		37570D331B02D3A00017B07E /* libTEALAudienceStream copy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 37570D2A1B02B1250017B07E /* libTEALAudienceStream copy.a */; };
+		37570D331B02D3A00017B07E /* libTEALAudienceStream-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 37570D2A1B02B1250017B07E /* libTEALAudienceStream-Tests.a */; };
 		37570D3A1B02D4810017B07E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37570D2E1B02B18E0017B07E /* SystemConfiguration.framework */; };
 		37570D3B1B02D4930017B07E /* TealiumUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37570D2C1B02B1810017B07E /* TealiumUtilities.framework */; };
+		37570D491B03CCC90017B07E /* ASTestMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37570D481B03CCC90017B07E /* ASTestMenuViewController.m */; };
+		37570D4A1B03CCC90017B07E /* ASTestMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37570D481B03CCC90017B07E /* ASTestMenuViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,8 +70,6 @@
 		37570C9D1B02A4F20017B07E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		37570C9F1B02A4F20017B07E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		37570CA01B02A4F20017B07E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		37570CA21B02A4F20017B07E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		37570CA31B02A4F20017B07E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		37570CA61B02A4F20017B07E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		37570CA81B02A4F20017B07E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		37570CAB1B02A4F20017B07E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -84,6 +83,8 @@
 		37570D081B02A78C0017B07E /* TEALSettingsStore_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TEALSettingsStore_Tests.m; sourceTree = "<group>"; };
 		37570D2C1B02B1810017B07E /* TealiumUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TealiumUtilities.framework; path = ../Release/TealiumUtilities.framework; sourceTree = "<group>"; };
 		37570D2E1B02B18E0017B07E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		37570D471B03CCC90017B07E /* ASTestMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASTestMenuViewController.h; sourceTree = "<group>"; };
+		37570D481B03CCC90017B07E /* ASTestMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASTestMenuViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +94,7 @@
 			files = (
 				37570D2D1B02B1810017B07E /* TealiumUtilities.framework in Frameworks */,
 				37570D2F1B02B18E0017B07E /* SystemConfiguration.framework in Frameworks */,
-				37570D2B1B02B16F0017B07E /* libTEALAudienceStream copy.a in Frameworks */,
+				37570D2B1B02B16F0017B07E /* libTEALAudienceStream-Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,7 +104,7 @@
 			files = (
 				37570D3B1B02D4930017B07E /* TealiumUtilities.framework in Frameworks */,
 				37570D3A1B02D4810017B07E /* SystemConfiguration.framework in Frameworks */,
-				37570D331B02D3A00017B07E /* libTEALAudienceStream copy.a in Frameworks */,
+				37570D331B02D3A00017B07E /* libTEALAudienceStream-Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,10 +135,10 @@
 		37570C9A1B02A4F20017B07E /* TestApp */ = {
 			isa = PBXGroup;
 			children = (
+				37570D471B03CCC90017B07E /* ASTestMenuViewController.h */,
+				37570D481B03CCC90017B07E /* ASTestMenuViewController.m */,
 				37570C9F1B02A4F20017B07E /* AppDelegate.h */,
 				37570CA01B02A4F20017B07E /* AppDelegate.m */,
-				37570CA21B02A4F20017B07E /* ViewController.h */,
-				37570CA31B02A4F20017B07E /* ViewController.m */,
 				37570CA51B02A4F20017B07E /* Main.storyboard */,
 				37570CA81B02A4F20017B07E /* Images.xcassets */,
 				37570CAA1B02A4F20017B07E /* LaunchScreen.xib */,
@@ -189,7 +190,7 @@
 			children = (
 				37570D261B02B1250017B07E /* libTEALAudienceStream.a */,
 				37570D281B02B1250017B07E /* TEALAudienceStreamTests.xctest */,
-				37570D2A1B02B1250017B07E /* libTEALAudienceStream copy.a */,
+				37570D2A1B02B1250017B07E /* libTEALAudienceStream-Tests.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -291,10 +292,10 @@
 			remoteRef = 37570D271B02B1250017B07E /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		37570D2A1B02B1250017B07E /* libTEALAudienceStream copy.a */ = {
+		37570D2A1B02B1250017B07E /* libTEALAudienceStream-Tests.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = "libTEALAudienceStream copy.a";
+			path = "libTEALAudienceStream-Tests.a";
 			remoteRef = 37570D291B02B1250017B07E /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -325,7 +326,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37570CA41B02A4F20017B07E /* ViewController.m in Sources */,
+				37570D491B03CCC90017B07E /* ASTestMenuViewController.m in Sources */,
 				37570CA11B02A4F20017B07E /* AppDelegate.m in Sources */,
 				37570C9E1B02A4F20017B07E /* main.m in Sources */,
 			);
@@ -339,6 +340,7 @@
 				37570D091B02A78C0017B07E /* TEALAudienceStream_Tests.m in Sources */,
 				37570D0B1B02A78C0017B07E /* TEALSettingsStore_Tests.m in Sources */,
 				37570D0A1B02A78C0017B07E /* TealAudienceStreamDispatchManager_Tests.m in Sources */,
+				37570D4A1B03CCC90017B07E /* ASTestMenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,6 +471,7 @@
 				);
 				INFOPLIST_FILE = TestApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -483,6 +486,7 @@
 				);
 				INFOPLIST_FILE = TestApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

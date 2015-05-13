@@ -21,7 +21,8 @@ static NSString * const kTEALAudienceStreamDatasourceStorageKey = @"com.tealium.
 
 - (void) loadWithUUIDKey:(NSString *)key {
     
-    if (![self unarchiveWithStorageKey:kTEALAudienceStreamDatasourceStorageKey]) {
+    NSString *storagekey = [kTEALAudienceStreamDatasourceStorageKey copy];
+    if (![self unarchiveWithStorageKey:storagekey]) {
         
         [self addDefaultDatasources];
     }
@@ -59,7 +60,7 @@ static NSString * const kTEALAudienceStreamDatasourceStorageKey = @"com.tealium.
 
     for (id key in keys) {
         
-        id obj = self[keys];
+        id obj = self[key];
 
         if (obj) {
             datasources[key] = obj;
