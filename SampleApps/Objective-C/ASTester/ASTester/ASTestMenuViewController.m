@@ -14,6 +14,7 @@ typedef NS_ENUM(NSUInteger, ASTestMenuItem) {
     ASTestMenuItemSendEventLink = 0,
     ASTestMenuItemSendEventView,
     ASTestMenuItemFetchProfle,
+    ASTestMenuItemLogLastProfile,
     ASTestMenuItemNumberOfItems
 };
 
@@ -59,6 +60,10 @@ typedef NS_ENUM(NSUInteger, ASTestMenuItem) {
             case ASTestMenuItemFetchProfle:
                 cell.textLabel.text = @"Fetch Current Profile";
                 break;
+            case ASTestMenuItemLogLastProfile:
+                cell.textLabel.text = @"Log Last Loaded Profile";
+                break;
+                
             default:
                 break;
         }
@@ -81,6 +86,9 @@ typedef NS_ENUM(NSUInteger, ASTestMenuItem) {
             break;
         case ASTestMenuItemFetchProfle:
             [self fetchAudienceStreamProfile];
+            break;
+        case ASTestMenuItemLogLastProfile:
+            [self accessLastLoadedAudienceStreamProfile];
             break;
         default:
             break;
@@ -113,6 +121,17 @@ typedef NS_ENUM(NSUInteger, ASTestMenuItem) {
         }
         
     }];
+}
+
+- (void) accessLastLoadedAudienceStreamProfile {
+
+    TEALProfile *profile = [TEALAudienceStream cachedProfileCopy];
+
+    if (profile) {
+        NSLog(@"last loaded profile: %@", profile);
+    } else {
+        NSLog(@"a valid profile has not been received yet.");
+    }
 }
 
 @end

@@ -121,6 +121,70 @@ func sendLifecycleEventWithName(name: String) {
 
 ####8. Access the enriched profile from AudienceStream
 
+Access to the last profile the library received is always available via the ```cachedProfileCopy```  method:
+
+##### Objective-C
+
+```objective-c
+- (void) accessLastLoadedAudienceStreamProfile {
+
+    TEALProfile *profile = [TEALAudienceStream cachedProfileCopy];
+
+    if (profile) {
+        NSLog(@"last loaded profile: %@", profile);
+    } else {
+        NSLog(@"a valid profile has not been received yet.");
+    }
+}
+```
+
+##### Swift
+
+```swift
+func accessLastLoadedAudienceStreamProfile() {
+    
+    if let profile:TEALProfile = TEALAudienceStream.cachedProfileCopy() {
+        println("last loaded profile: \(profile)")
+    } else {
+        println("a valid profile has not been received yet.")
+    }
+}
+```
+
+To explicitly fetch a new copy of the user's current profile you can use the ```fetchProfileWithCompletion``` method.  This will query the latest profile and pass the result to the completion block provided:
+
+##### Objective-C
+
+```objective-c
+- (void) fetchAudienceStreamProfile {
+    
+    [TEALAudienceStream fetchProfileWithCompletion:^(TEALProfile *profile, NSError *error) {
+       
+        if (error) {
+            NSLog(@"test app failed to receive profile with error: %@", [error localizedDescription]);
+        } else {
+            NSLog(@"test app received profile: %@", profile);
+        }
+        
+    }];
+}
+```
+
+##### Swift
+
+```swift
+func fetchAudienceStreamProfile() {
+    
+    TEALAudienceStream.fetchProfileWithCompletion { (profile, error) -> Void in
+        
+        if (error != nil) {
+            println("test app failed to receive profile with error: \(error.localizedDescription)")
+        } else {
+            println("test app received profile: \(profile)")
+        }
+    }
+}
+```
 
 ###References###
 

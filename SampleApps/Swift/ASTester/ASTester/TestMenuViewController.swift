@@ -12,6 +12,7 @@ enum MenuItems: Int {
     case SendEventLink = 0
     case SendEventView
     case FetchProfile
+    case LogLastProfile
     case NumberOfItems
 }
 
@@ -56,6 +57,9 @@ class TestMenuViewController: UITableViewController {
                 
             case .FetchProfile:
                 cell.textLabel?.text = "Fetch Current Profile"
+            
+            case .LogLastProfile:
+                cell.textLabel?.text = "Log Last Loaded Profile"
                 
             default:
                 println("un supported menu item")
@@ -82,6 +86,9 @@ class TestMenuViewController: UITableViewController {
             case .FetchProfile:
                 fetchAudienceStreamProfile()
                 
+            case .LogLastProfile:
+                accessLastLoadedAudienceStreamProfile()
+                
             default:
                 println("un supported menu item")
             }
@@ -107,9 +114,23 @@ class TestMenuViewController: UITableViewController {
         
         TEALAudienceStream.fetchProfileWithCompletion { (profile, error) -> Void in
             
-            println("test app received profile: \(profile)")
+            if (error != nil) {
+                println("test app failed to receive profile with error: \(error.localizedDescription)")
+            } else {
+                println("test app received profile: \(profile)")
+            }
         }
     }
+    
+    func accessLastLoadedAudienceStreamProfile() {
+        
+        if let profile:TEALProfile = TEALAudienceStream.cachedProfileCopy() {
+            println("last loaded profile: \(profile)")
+        } else {
+            println("a valid profile has not been received yet.")
+        }
+    }
+
 }
 
 
