@@ -8,10 +8,10 @@ An [AudienceStream](http://tealium.com/products/audiencestream/) library for iOS
     - [2. Add to Project](#2-add-to-project)
     - [3. Link Frameworks](#3-link-frameworks)
     - [4. Add Linker Flags](#4-add-linker-flags)
-    - [5o. Import and Enable - Objective-C](#5o-import-and-init-objective-c)
-    - [5s. Import and Enable - Swift](#5s-import-and-init-swift)
-    - [6o. Send Events to AudienceStream Objective-C](#6o-send-events-to-audiencestream-objective-c)
-    - [6s. Send Events to AudienceStream Swift](#6s-send-events-to-audiencestream-swift)
+    - [5. Import Headers](#5-import-headers)
+	- [6. Enable with Configuration](#6-enable-with-configuration)
+    - [7. Send Events to AudienceStream](#7-send-events-to-audiencestream)
+    - [8. Access the enriched profile from AudienceStream](#8-access-the-enriched-profile-from-audienceatream)
 
 ###Requirements###
 
@@ -22,11 +22,11 @@ An [AudienceStream](http://tealium.com/products/audiencestream/) library for iOS
 This is a walk through of setting up a simple project to use the AudienceStream(http://tealium.com/products/audiencestream/) iOS library.
 	
 ####1. Clone/Copy Library####
-onto your dev machine by clicking on the *Clone to Desktop* or *Download ZIP* buttons on the main repo page.
+Copy or clone the library repo onto your dev machine by clicking on the *Clone to Desktop* or *Download ZIP* buttons on the main repo page.
 
 ####2. Add Tealium Framworks To Project 
 
-2a. From the *audiencestream-ios/Release* folder, drag & drop the *TealiumUtilities* and *TEALAudienceStream* frameworks into your XCode project's Navigation window.
+From the *audiencestream-ios/Release* folder, drag & drop the *TealiumUtilities* and *TEALAudienceStream* frameworks into your XCode project's Navigation window.
 
 ####3. Link Frameworks
 [Link the following Apple framework](https://developer.apple.com/library/ios/recipes/xcode_help-project_editor/Articles/AddingaLibrarytoaTarget.html) to your project:
@@ -36,15 +36,31 @@ onto your dev machine by clicking on the *Clone to Desktop* or *Download ZIP* bu
 ####4. Add Linker Flags
 Add the "-ObjC" linker flag to your project's Target-Build Settings.
 
+####5. Import Headers
 
-####5o. Import and Enable Objective-C
-5o1. Import the library at the top of any file you wish to access the library in.
+##### Objective-C
+For Objective-C import the library at the top of any file you wish to access the library in:
   
 ```objective-c
 #import <TEALAudienceStream/TEALAudienceStream.h>
 ```
+##### Swift
 
-5o2. Enable the library in your appDelegate.m class:
+In swift you'll need to Update your project's Objective-C bridging header or create one with the following entries:
+
+```objective-c
+#import <TEALAudienceStream/TEALAudienceStream.h>
+#import <TEALAudienceStream/TEALAudienceStreamConfiguration.h>
+#import <TEALAudienceStream/TEALProfile.h>
+#import <TEALAudienceStream/TEALEvent.h>
+```
+
+####6. Enable with Configuration
+
+Then enable the library with a ```TEALAudienceStreamConfiguration``` instance in your appDelegate class:
+
+##### Objective-C
+
 ```objective-c
 - (BOOL) application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
@@ -60,18 +76,7 @@ Add the "-ObjC" linker flag to your project's Target-Build Settings.
 }
 ```
 
-####5s. Import and Enable Swift
-
-5s1. Create or Update your project's Objective-C bridging header with the following entryes:
-
-```objective-c
-#import <TEALAudienceStream/TEALAudienceStream.h>
-#import <TEALAudienceStream/TEALAudienceStreamConfiguration.h>
-#import <TEALAudienceStream/TEALProfile.h>
-#import <TEALAudienceStream/TEALEvent.h>
-```
-
-5s2. Enable the library in your appDelegate.m class: 
+##### Swift
 
 ```swift
 func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
@@ -86,9 +91,11 @@ func application(application: UIApplication, didFinishLaunchingWithOptions launc
 }
 ```
 
-####6o. Send Events to AudienceStream Objective-C
+####7. Send Events to AudienceStream
 
-6o. Send Events to AudienceStream using the ```sendEvent:withData``` method:
+Send Events to AudienceStream using the ```sendEvent:withData``` method:
+
+##### Objective-C
 
 ```objective-c
 - (void) sendLifecycleEventWithName:(NSString *)eventName {
@@ -100,9 +107,7 @@ func application(application: UIApplication, didFinishLaunchingWithOptions launc
 
 }
 ```
-####6s. Send Events to AudienceStream Swift
-
-6s. Send Events to AudienceStream using the ```sendEvent:withData``` method:
+##### Swift
 
 ```swift
 func sendLifecycleEventWithName(name: String) {
@@ -112,3 +117,6 @@ func sendLifecycleEventWithName(name: String) {
     TEALAudienceStream.sendEvent(TEALEventType.Link, withData: data)
 }
 ```
+
+####8. Access the enriched profile from AudienceStream
+
