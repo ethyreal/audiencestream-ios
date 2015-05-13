@@ -18,7 +18,16 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+    TEALAudienceStreamConfiguration *config = [TEALAudienceStreamConfiguration configurationWithAccount:@"tealiummobile"
+                                                                                                profile:@"demo"
+                                                                                            environment:@"dev"];
+    
+    config.logLevel = TEALAudienceStreamLogLevelExtremeVerbosity;
+    config.pollingFrequency = TEALProfilePollingFrequencyOnRequest;
+    
+    [TEALAudienceStream enableWithConfiguration:config];
+    
     return YES;
 }
 
