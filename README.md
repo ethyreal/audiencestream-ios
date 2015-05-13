@@ -12,6 +12,7 @@ An [AudienceStream](http://tealium.com/products/audiencestream/) library for iOS
 	- [6. Enable with Configuration](#6-enable-with-configuration)
     - [7. Send Events to AudienceStream](#7-send-events-to-audiencestream)
     - [8. Access the enriched profile from AudienceStream](#8-access-the-enriched-profile-from-audienceatream)
+- [References](#references)
 
 ###Requirements###
 
@@ -24,19 +25,19 @@ This is a walk through of setting up a simple project to use the AudienceStream(
 ####1. Clone/Copy Library####
 Copy or clone the library repo onto your dev machine by clicking on the *Clone to Desktop* or *Download ZIP* buttons on the main repo page.
 
-####2. Add Tealium Framworks To Project 
+####2. Add Tealium Framworks To Project#### 
 
 From the *audiencestream-ios/Release* folder, drag & drop the *TealiumUtilities* and *TEALAudienceStream* frameworks into your XCode project's Navigation window.
 
-####3. Link Frameworks
+####3. Link Frameworks####
 [Link the following Apple framework](https://developer.apple.com/library/ios/recipes/xcode_help-project_editor/Articles/AddingaLibrarytoaTarget.html) to your project:
 
 - SystemConfiguration
 
-####4. Add Linker Flags
+####4. Add Linker Flags####
 Add the "-ObjC" linker flag to your project's Target-Build Settings.
 
-####5. Import Headers
+####5. Import Headers####
 
 ##### Objective-C
 For Objective-C import the library at the top of any file you wish to access the library in:
@@ -120,3 +121,9 @@ func sendLifecycleEventWithName(name: String) {
 
 ####8. Access the enriched profile from AudienceStream
 
+
+###References###
+
+* [REST API](REST-API.md)
+* [Profile API](API-Profile.md)
+* [Data Layer Enrichment Public API](https://tealium.bloomfire.com/posts/915975-data-layer-enrichment-public-api)(Bloomfire Doc)
