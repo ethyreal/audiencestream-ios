@@ -313,7 +313,8 @@
             case TEALDispatchStatusQueued:
     
                 [weakSelf dispatchManager:weakSelf.dispatchManager
-                       didProcessDispatch:dispatch];
+                       didProcessDispatch:dispatch
+                                   status:status];
                 
                 break;
             case TEALDispatchStatusFailed:
@@ -334,15 +335,21 @@
 - (void) dispatchManager:(TEALAudienceStreamDispatchManager *)dispatchManager didProcessDispatch:(TEALDispatch *)dispatch status:(TEALDispatchStatus)status {
 
     if (self.settingsStore.currentSettings.logLevel >= TEALAudienceStreamLogLevelVerbose) {
+
+        NSString *statusString = @"sent";
         
+        if  (status == TEALDispatchStatusQueued) {
+            statusString = @"queued";
+        }
+
         if ([dispatch.payload isKindOfClass:[NSString class]]) {
-            NSDictionary *datalayerDump = [TEALNetworkHelpers dictionaryFromUrlParamString:dispatch.payload];
+            NSDictionary *datalayerDump = [TEALNetworkHelpers dictionaryFromUrlParamString:(NSString *)dispatch.payload];
+            
+            TEAL_LogVerbose(@"Successfully %@ dispatch with payload %@", statusString, datalayerDump);
+
         } else {
             
-            NSString *status = @"Sent";
-            
-            if  (status == TEALDispatchStatusQueued)
-            TEAL_LogVerbose(@"S)
+            TEAL_LogVerbose(@"Successfully %@ dispatch.", statusString)
         }
     }
     if (self.settingsStore.currentSettings.pollingFrequency == TEALProfilePollingFrequencyOnRequest) {
