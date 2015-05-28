@@ -12,6 +12,7 @@
 #import "TEALAudienceStreamDispatchManager.h"
 
 //#import "TEALDatasourceManager.h"
+
 #import "TEALProfileStore.h"
 #import "TEALSettings.h"
 
@@ -24,6 +25,10 @@
 
 #import "TEALURLSessionManager.h"
 #import "TEALNetworkHelpers.h"
+
+// Dispatch
+
+#import <TealiumUtilities/TEALDispatch.h>
 
 // Logging
 
@@ -326,8 +331,20 @@
     [self.dispatchManager archiveDispatchQueue];
 }
 
-- (void) dispatchManager:(TEALAudienceStreamDispatchManager *)dispatchManager didProcessDispatch:(TEALDispatch *)dispatch {
+- (void) dispatchManager:(TEALAudienceStreamDispatchManager *)dispatchManager didProcessDispatch:(TEALDispatch *)dispatch status:(TEALDispatchStatus)status {
 
+    if (self.settingsStore.currentSettings.logLevel >= TEALAudienceStreamLogLevelVerbose) {
+        
+        if ([dispatch.payload isKindOfClass:[NSString class]]) {
+            NSDictionary *datalayerDump = [TEALNetworkHelpers dictionaryFromUrlParamString:dispatch.payload];
+        } else {
+            
+            NSString *status = @"Sent";
+            
+            if  (status == TEALDispatchStatusQueued)
+            TEAL_LogVerbose(@"S)
+        }
+    }
     if (self.settingsStore.currentSettings.pollingFrequency == TEALProfilePollingFrequencyOnRequest) {
         return;
     }

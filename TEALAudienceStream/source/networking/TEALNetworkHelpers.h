@@ -18,6 +18,8 @@
 
 + (NSString *) percentEscapeURLParameter:(NSString *)string;
 
++ (NSDictionary *) dictionaryFromUrlParamString:(NSString *)string;
+
 + (NSURLRequest *) requestWithURLString:(NSString *)urlString;
 
 + (NSURLRequest *) requestWithURL:(NSURL *)url;

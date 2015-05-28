@@ -49,6 +49,34 @@
                                                                      kCFStringEncodingUTF8));
 }
 
++ (NSDictionary *) dictionaryFromUrlParamString:(NSString *)string {
+
+    if (!string) {
+        return nil;
+    }
+    
+    NSArray *allParams = [string componentsSeparatedByString:@"&"];
+    
+    if (![allParams count] ) {
+        return nil;
+    }
+    
+    NSMutableDictionary *data = [NSMutableDictionary dictionaryWithCapacity:allParams.count];
+
+    for (NSString *param in allParams) {
+        
+        NSArray *bits = [param componentsSeparatedByString:@"="];
+        
+        if (bits.count == 2) {
+            NSString *key = bits[0];
+            NSString *value = bits[1];
+            data[key] = value;
+        }
+    }
+
+    return [NSDictionary dictionaryWithDictionary:data];
+}
+
 + (NSURLRequest *) requestWithURLString:(NSString *)urlString {
     
     if (!urlString) {
