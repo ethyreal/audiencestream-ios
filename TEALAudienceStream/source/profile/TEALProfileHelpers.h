@@ -10,11 +10,11 @@
 
 #import "TEALProfileAttribute.h"
 
-@class TEALProfile;
+@class TEALVisitorProfile;
 
 typedef TEALProfileAttribute * (^TEALProfileAttributeCreationBlock)(id key, id obj);
 
-typedef void (^TEALProfileCompletionBlock)(TEALProfile *profile, NSError *error);
+typedef void (^TEALProfileCompletionBlock)(TEALVisitorProfile *profile, NSError *error);
 
 
 @interface TEALProfileHelpers : NSObject

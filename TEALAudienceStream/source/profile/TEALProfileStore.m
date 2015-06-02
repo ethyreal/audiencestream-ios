@@ -8,7 +8,7 @@
 
 #import "TEALProfileStore.h"
 
-#import "TEALProfile.h"
+#import "TEALVisitorProfile.h"
 #import "TEALProfile+PrivateHeader.h"
 #import "TEALNetworkHelpers.h"
 #import "TEALURLSessionManager.h"
@@ -18,7 +18,7 @@
 
 @interface TEALProfileStore ()
 
-@property (strong, nonatomic) TEALProfile *currentProfile;
+@property (strong, nonatomic) TEALVisitorProfile *currentProfile;
 
 @property (strong, nonatomic) NSURL *profileURL;
 @property (strong, nonatomic) NSURL *profileDefinitionURL;
@@ -40,7 +40,7 @@
         _profileURL             = profileURL;
         _profileDefinitionURL   = definitionURL;
         _urlSessionManager      = urlSessionManager;
-        _currentProfile         = [[TEALProfile alloc] initWithVisitorID:visitorID];
+        _currentProfile         = [[TEALVisitorProfile alloc] initWithVisitorID:visitorID];
     }
     
     return self;
@@ -94,7 +94,7 @@
                              TEAL_LogVerbose(@"Profile Fetch Failed with response: %@, error: %@", response, [connectionError localizedDescription]);
                          }
                          
-                         TEALProfile *profile = weakSelf.currentProfile;
+                         TEALVisitorProfile *profile = weakSelf.currentProfile;
                          
                          [weakSelf updateProfile:profile
                                       fromSource:data];
@@ -142,7 +142,7 @@
 }
 
 
-- (void) updateProfile:(TEALProfile *)profile
+- (void) updateProfile:(TEALVisitorProfile *)profile
             fromSource:(NSDictionary *)source {
     
     profile.rawProfile = source;
@@ -156,7 +156,7 @@
 
 #pragma mark - Attributes
 
-- (void) updateProfileAttributes:(TEALProfile *)profile
+- (void) updateProfileAttributes:(TEALVisitorProfile *)profile
                       fromSource:(NSDictionary *)source {
     
     [self updateProfileAudiences:profile
@@ -178,7 +178,7 @@
                        fromSource:source];
 }
 
-- (void) updateProfileAudiences:(TEALProfile *)profile
+- (void) updateProfileAudiences:(TEALVisitorProfile *)profile
                      fromSource:(NSDictionary *)source {
     
     NSArray *audiences = [TEALProfileHelpers arrayOfAudiencesFromSource:source];
@@ -188,7 +188,7 @@
     profile.audiences = audiences;
 }
 
-- (void) updateProfileBadges:(TEALProfile *)profile
+- (void) updateProfileBadges:(TEALVisitorProfile *)profile
                   fromSource:(NSDictionary *)source {
     
     NSArray *badges = [TEALProfileHelpers arrayOfBadgesFromSource:source];
@@ -198,7 +198,7 @@
     profile.badges = badges;
 }
 
-- (void) updateProfileDates:(TEALProfile *)profile
+- (void) updateProfileDates:(TEALVisitorProfile *)profile
                  fromSource:(NSDictionary *)source {
     
     NSArray *dates = [TEALProfileHelpers arrayOfDatesFromSource:source];
@@ -208,7 +208,7 @@
     profile.dates = dates;
 }
 
-- (void) updateProfileFlags:(TEALProfile *)profile
+- (void) updateProfileFlags:(TEALVisitorProfile *)profile
                  fromSource:(NSDictionary *)source {
     
     NSArray *flags = [TEALProfileHelpers arrayOfFlagsFromSource:source];
@@ -218,7 +218,7 @@
     profile.flags = flags;
 }
 
-- (void) updateProfileMetrics:(TEALProfile *)profile
+- (void) updateProfileMetrics:(TEALVisitorProfile *)profile
                    fromSource:(NSDictionary *)source {
     
     NSArray *metrics = [TEALProfileHelpers arrayOfMetricsFromSource:source];
@@ -228,7 +228,7 @@
     profile.metrics = metrics;
 }
 
-- (void) updateProfileProperties:(TEALProfile *)profile
+- (void) updateProfileProperties:(TEALVisitorProfile *)profile
                       fromSource:(NSDictionary *)source {
     
     NSArray *properties = [TEALProfileHelpers arrayOfPropertiesFromSource:source];
@@ -241,7 +241,7 @@
 
 #pragma mark - Current Visit
 
-- (void) updateProfileCurrentVisit:(TEALProfile *)profile fromSource:(NSDictionary *)source {
+- (void) updateProfileCurrentVisit:(TEALVisitorProfile *)profile fromSource:(NSDictionary *)source {
     
     NSDictionary *sourceVisit = source[@"current_visit"];
     

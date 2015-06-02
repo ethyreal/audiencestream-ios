@@ -61,7 +61,7 @@
 @property (strong, nonatomic) TEALURLSessionManager *urlSessionManager;
 
 @property (copy, readwrite) NSString *visitorID;
-@property (copy, readwrite) TEALProfile *cachedProfile;
+@property (copy, readwrite) TEALVisitorProfile *cachedProfile;
 @property (readwrite) BOOL enabled;
 
 
@@ -286,7 +286,7 @@
 
 #pragma mark - Tracking / Send Data
 
-+ (void) sendEvent:(TEALEventType)eventType withData:(NSDictionary *)customData {
++ (void) sendEventWithData:(NSDictionary *)customData {
 
     __weak TEALAudienceStream *instance = [[self class] sharedInstance];
     
@@ -297,9 +297,25 @@
     
     [instance.operationManager addOperationWithBlock:^{
         
-        [instance sendEvent:eventType withData:customData];
+        [instance sendEvent:TEALEventTypeLink
+                   withData:customData];
     }];
+}
+
++ (void) sendViewWithData:(NSDictionary *)customData {
+
+    __weak TEALAudienceStream *instance = [[self class] sharedInstance];
     
+    if (!instance.enabled) {
+        TEAL_LogVerbose(@"AudienceStream Library Disabled, Ignoring: %s", __PRETTY_FUNCTION__);
+        return;
+    }
+    
+    [instance.operationManager addOperationWithBlock:^{
+        
+        [instance sendEvent:TEALEventTypeView
+                   withData:customData];
+    }];
 }
 
 - (void) sendEvent:(TEALEventType)eventType withData:(NSDictionary *)customData {
@@ -356,7 +372,7 @@
         return;
     }
     
-    [self fetchProfileWithCompletion:^(TEALProfile *profile, NSError *error) {
+    [self fetchProfileWithCompletion:^(TEALVisitorProfile *profile, NSError *error) {
         
         TEAL_LogVerbose(@"did fetch profile: %@ after dispatch event", profile);
     }];
@@ -406,7 +422,7 @@
 
 #pragma mark - Profile
 
-+ (void) fetchProfileWithCompletion:(void (^)(TEALProfile *profile, NSError *error))completion {
++ (void) fetchVisitorProfileWithCompletion:(void (^)(TEALVisitorProfile *profile, NSError *error))completion {
 
     __weak TEALAudienceStream *instance = [[self class] sharedInstance];
     
@@ -421,7 +437,7 @@
     }];
 }
 
-- (void) fetchProfileWithCompletion:(void (^)(TEALProfile *profile, NSError *error))completion {
+- (void) fetchProfileWithCompletion:(void (^)(TEALVisitorProfile *profile, NSError *error))completion {
 
     __weak TEALAudienceStream *weakSelf = self;
 
@@ -430,7 +446,7 @@
     }
     
 
-    TEALProfileCompletionBlock storeCompletion = ^(TEALProfile *profile, NSError *error) {
+    TEALProfileCompletionBlock storeCompletion = ^(TEALVisitorProfile *profile, NSError *error) {
 
         if (profile) {
             TEAL_LogVerbose(@"got profile!!! : %@", profile);
@@ -446,7 +462,7 @@
     [self.profileStore fetchProfileWithCompletion:storeCompletion];
 }
 
-+ (TEALProfile *) cachedProfileCopy {
++ (TEALVisitorProfile *) cachedVisitorProfileCopy {
 
     TEALAudienceStream *instance = [self sharedInstance];
 

@@ -100,19 +100,19 @@ typedef NS_ENUM(NSUInteger, ASTestMenuItem) {
     
     NSDictionary *data = @{ @"event_name" : @"m_view"};
     
-    [TEALAudienceStream sendEvent:TEALEventTypeView withData:data];
+    [TEALAudienceStream sendViewWithData:data];
 }
 
 - (void) sendAudienceStreamLinkEvent {
     
     NSDictionary *data = @{ @"event_name" : @"m_link"};
     
-    [TEALAudienceStream sendEvent:TEALEventTypeLink withData:data];
+    [TEALAudienceStream sendEventWithData:data];
 }
 
 - (void) fetchAudienceStreamProfile {
     
-    [TEALAudienceStream fetchProfileWithCompletion:^(TEALProfile *profile, NSError *error) {
+    [TEALAudienceStream fetchVisitorProfileWithCompletion:^(TEALVisitorProfile *profile, NSError *error) {
        
         if (error) {
             NSLog(@"test app failed to receive profile with error: %@", [error localizedDescription]);
@@ -125,13 +125,26 @@ typedef NS_ENUM(NSUInteger, ASTestMenuItem) {
 
 - (void) accessLastLoadedAudienceStreamProfile {
 
-    TEALProfile *profile = [TEALAudienceStream cachedProfileCopy];
+    TEALVisitorProfile *profile = [TEALAudienceStream cachedVisitorProfileCopy];
 
     if (profile) {
         NSLog(@"last loaded profile: %@", profile);
     } else {
         NSLog(@"a valid profile has not been received yet.");
     }
+}
+
+- (void) presentTraceInputView {
+    
+}
+
+- (void) joinTraceWithToken:(NSString *)token {
+    
+    [TEALAudienceStream joinTraceWithToken:token];
+}
+
+- (void) leaveTrace {
+    [TEALAudienceStream leaveTrace];
 }
 
 @end

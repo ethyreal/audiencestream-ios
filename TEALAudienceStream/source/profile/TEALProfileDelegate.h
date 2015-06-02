@@ -12,6 +12,6 @@
 
 @protocol TEALProfileDelegate <NSObject>
 
-- (void) didUpdateProfile:(TEALProfile *)oldProfile newProfile:(TEALProfile *)newProfile;
+- (void) didUpdateProfile:(TEALVisitorProfile *)oldProfile newProfile:(TEALVisitorProfile *)newProfile;
 
 @end

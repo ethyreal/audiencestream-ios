@@ -100,7 +100,7 @@ class TestMenuViewController: UITableViewController {
         
         let data: [String: String] = [ "event_name" : "m_view" ]
         
-        TEALAudienceStream.sendEvent(TEALEventType.View, withData: data)
+        TEALAudienceStream.send
     }
     
     func sendAudienceStreamLinkEvent() {
@@ -130,7 +130,20 @@ class TestMenuViewController: UITableViewController {
             println("a valid profile has not been received yet.")
         }
     }
+    
+    func presentTraceInputView() {
+    
+    }
+    
+    func joinTraceWithToken( token:String ) {
+    
+        TEALAudienceStream.joinTraceWithToken(token)
+    }
 
+    func leaveTrace() {
+        
+        TEALAudienceStream.leaveTrace()
+    }
 }
 
 

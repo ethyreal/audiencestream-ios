@@ -8,7 +8,7 @@
 //  Version 0.5
 
 #import <Foundation/Foundation.h>
-#import "TEALProfile.h"
+#import "TEALVisitorProfile.h"
 #import "TEALAudienceStreamConfiguration.h"
 #import <TealiumUtilities/TEALBlocks.h>
 #import "TEALEvent.h"
@@ -42,13 +42,19 @@
 # pragma mark - Send AudienceStream Data
 
 /**
- *  Sends event to AudienceStream.  Event is packaged with Event type, any custom key/value data sources passed in along with the default datasources provided by the library.
+ *  Sends an event to AudienceStream.  Event are packaged with any custom key/value data sources passed in along with the default datasources provided by the library.
  *
- *  @param eventType  Valid TEALEventType, currently links and views are supported.
  *  @param customData Dictionary of custom datasources (key/value pairs) to be included in the event dispatch.
  */
-+ (void) sendEvent:(TEALEventType)eventType
-          withData:(NSDictionary *)customData;
++ (void) sendEventWithData:(NSDictionary *)customData;
+
+/**
+ *  Sends a view to AudienceStream.  Views are packaged with any custom key/value data sources passed in along with the default datasources provided by the library.
+ *
+ *  @param customData Dictionary of custom datasources (key/value pairs) to be included in the event dispatch.
+ */
+
++ (void) sendViewWithData:(NSDictionary *)customData;
 
 # pragma mark - Get AudienceStream Data
 
@@ -57,14 +63,14 @@
  *
  *  @param completion Completion block with retrieved TEALProfile instance and an error should any problems occur.
  */
-+ (void) fetchProfileWithCompletion:(void (^)(TEALProfile *profile, NSError *error))completion;
++ (void) fetchVisitorProfileWithCompletion:(void (^)(TEALVisitorProfile *profile, NSError *error))completion;
 
 /**
  *  Last retrieved profile instance.  This is updated every time the profile is queried.  Depending on the settings the library was enabled with, this could be after every sendEvent:customData: call or only on explicit request.
  *
  *  @return Returns valid TEALProfile object.  Its properties might be nil of nothing is loaded into them yet.
  */
-+ (TEALProfile *) cachedProfileCopy;
++ (TEALVisitorProfile *) cachedVisitorProfileCopy;
 
 /**
  *  Unique visitor ID per Account / Device combination.

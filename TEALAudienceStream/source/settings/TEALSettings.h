@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@class TEALProfile;
+@class TEALVisitorProfile;
 @class TEALDatasource;
 @class TEALAudienceStreamConfiguration;
 

@@ -6,10 +6,10 @@
 //  Copyright (c) 2015 Tealium Inc. All rights reserved.
 //
 
-#import "TEALProfile.h"
+#import "TEALVisitorProfile.h"
 #import "TEALProfileCurrentVisit.h"
 
-@interface TEALProfile (PrivateHeader)
+@interface TEALVisitorProfile (PrivateHeader)
 
 @property (copy, readwrite) NSString *visitorID;
 

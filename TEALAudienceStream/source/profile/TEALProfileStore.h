@@ -17,7 +17,7 @@
 
 @interface TEALProfileStore : NSObject
 
-@property (readonly, nonatomic) TEALProfile *currentProfile;
+@property (readonly, nonatomic) TEALVisitorProfile *currentProfile;
 
 @property (readonly, nonatomic) NSURL *profileURL;
 @property (readonly, nonatomic) NSURL *profileDefinitionURL;

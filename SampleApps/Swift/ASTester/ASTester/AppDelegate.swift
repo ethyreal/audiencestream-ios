@@ -18,7 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let configuration = TEALAudienceStreamConfiguration(account: "tealiummobile", profile: "demo", environment: "dev")
         
-        configuration.logLevel = TEALAudienceStreamLogLevel.Verbose
+        configuration.logLevel = TEALAudienceStreamLogLevel.ExtremeVerbosity
+        configuration.pollingFrequency = TEALProfilePollingFrequency.OnRequest
         
         TEALAudienceStream.enableWithConfiguration(configuration)
         

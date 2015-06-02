@@ -134,4 +134,18 @@ typedef NS_ENUM(NSUInteger, ASTestMenuItem) {
     }
 }
 
+- (void) presentTraceInputView {
+    
+}
+
+- (void) joinTraceWithToken:(NSString *)token {
+    
+    [TEALAudienceStream joinTraceWithToken:token];
+}
+
+- (void) leaveTrace {
+    [TEALAudienceStream leaveTrace];
+}
+
+
 @end

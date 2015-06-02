@@ -6,12 +6,12 @@
 //  Copyright (c) 2015 Tealium Inc. All rights reserved.
 //
 
-#import "TEALProfile.h"
+#import "TEALVisitorProfile.h"
 #import "TEALProfileAttribute.h"
 #import "TEALProfile+PrivateHeader.h"
 #import "TEALProfileHelpers.h"
 
-@interface TEALProfile()
+@interface TEALVisitorProfile()
 
 @property (copy, readwrite) NSString *visitorID;
 
@@ -28,7 +28,7 @@
 
 @end
 
-@implementation TEALProfile
+@implementation TEALVisitorProfile
 
 - (instancetype) initWithVisitorID:(NSString *)visitorID {
     
@@ -78,7 +78,7 @@
 - (instancetype) copyWithZone:(NSZone *)zone {
     
     NSString *visitorID = [self.visitorID copyWithZone:zone];
-    TEALProfile *copy   = [[[self class] allocWithZone:zone] initWithVisitorID:visitorID];
+    TEALVisitorProfile *copy   = [[[self class] allocWithZone:zone] initWithVisitorID:visitorID];
     
     if (copy) {
         copy.audiences  = [self.audiences copyWithZone:zone];

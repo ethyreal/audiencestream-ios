@@ -10,7 +10,7 @@
 
 #import "TEALProfileCurrentVisit.h"
 
-@interface TEALProfile : NSObject <NSCoding, NSCopying>
+@interface TEALVisitorProfile : NSObject <NSCoding, NSCopying>
 
 /**
  *  Valid flag for Profile instance
