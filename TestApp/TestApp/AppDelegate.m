@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 
-#import <TEALAudienceStream/TEALAudienceStream.h>
+#import <TealiumConnectLibrary/TealiumConnect.h>
 
 @interface AppDelegate ()
 
@@ -19,14 +19,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
-    TEALAudienceStreamConfiguration *config = [TEALAudienceStreamConfiguration configurationWithAccount:@"tealiummobile"
-                                                                                                profile:@"demo"
-                                                                                            environment:@"dev"];
+    TEALConnectConfiguration *config = [TEALConnectConfiguration configurationWithAccount:@"tealiummobile"
+                                                                                  profile:@"demo"
+                                                                              environment:@"dev"];
     
-    config.logLevel = TEALAudienceStreamLogLevelExtremeVerbosity;
+    config.logLevel = TEALConnectLogLevelExtremeVerbosity;
     config.pollingFrequency = TEALProfilePollingFrequencyOnRequest;
     
-    [TEALAudienceStream enableWithConfiguration:config];
+    [TealiumConnect enableWithConfiguration:config];
     
     return YES;
 }

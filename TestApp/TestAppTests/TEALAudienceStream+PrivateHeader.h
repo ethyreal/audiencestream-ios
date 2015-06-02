@@ -12,7 +12,7 @@
 #import <TEALAudienceStream/TEALURLSessionManager.h>
 #import <TEALAudienceStream/TEALProfileStore.h>
 
-@interface TEALAudienceStream (Private)
+@interface TealiumConnect (Private)
 
 @property (strong, nonatomic) TEALSettingsStore *settingsStore;
 @property (strong, nonatomic) TEALOperationManager *operationManager;

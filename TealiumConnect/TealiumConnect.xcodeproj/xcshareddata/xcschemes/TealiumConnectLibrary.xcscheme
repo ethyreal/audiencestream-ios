@@ -9,29 +9,43 @@
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "372275701AFEA1840038DDDD"
-               BuildableName = "libTEALAudienceStream.a"
-               BlueprintName = "TEALAudienceStream"
-               ReferencedContainer = "container:TEALAudienceStream.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
             buildForProfiling = "NO"
             buildForArchiving = "NO"
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3722757B1AFEA1840038DDDD"
-               BuildableName = "TEALAudienceStreamTests.xctest"
-               BlueprintName = "TEALAudienceStreamTests"
+               BuildableName = "TealiumConnectTests.xctest"
+               BlueprintName = "TealiumConnectTests"
                ReferencedContainer = "container:TEALAudienceStream.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "372275701AFEA1840038DDDD"
+               BuildableName = "libTealiumConnectLibrary.a"
+               BlueprintName = "TealiumConnectLibrary"
+               ReferencedContainer = "container:TealiumConnect.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3722757B1AFEA1840038DDDD"
+               BuildableName = "TealiumConnectTests.xctest"
+               BlueprintName = "TealiumConnectTests"
+               ReferencedContainer = "container:TealiumConnect.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,8 +61,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3722757B1AFEA1840038DDDD"
-               BuildableName = "TEALAudienceStreamTests.xctest"
-               BlueprintName = "TEALAudienceStreamTests"
+               BuildableName = "TealiumConnectTests.xctest"
+               BlueprintName = "TealiumConnectTests"
                ReferencedContainer = "container:TEALAudienceStream.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -57,8 +71,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "372275701AFEA1840038DDDD"
-            BuildableName = "libTEALAudienceStream.a"
-            BlueprintName = "TEALAudienceStream"
+            BuildableName = "libTealiumConnectLibrary.a"
+            BlueprintName = "TealiumConnectLibrary"
             ReferencedContainer = "container:TEALAudienceStream.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -72,15 +86,6 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "372275701AFEA1840038DDDD"
-            BuildableName = "libTEALAudienceStream.a"
-            BlueprintName = "TEALAudienceStream"
-            ReferencedContainer = "container:TEALAudienceStream.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -90,15 +95,6 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "372275701AFEA1840038DDDD"
-            BuildableName = "libTEALAudienceStream.a"
-            BlueprintName = "TEALAudienceStream"
-            ReferencedContainer = "container:TEALAudienceStream.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

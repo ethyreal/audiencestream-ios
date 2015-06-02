@@ -1,6 +1,6 @@
 //
 //  TEALSettings.h
-//  TEALAudienceStream Library
+//  Tealium Connect Library
 //
 //  Created by George Webster on 12/29/14.
 //  Copyright (c) 2014 Tealium Inc. All rights reserved.
@@ -10,9 +10,9 @@
 
 @class TEALVisitorProfile;
 @class TEALDatasource;
-@class TEALAudienceStreamConfiguration;
+@class TEALConnectConfiguration;
 
-#import "TEALAudienceStreamConfiguration.h"
+#import "TEALConnectConfiguration.h"
 
 typedef NS_ENUM(NSUInteger, TEALSettingsStatus) {
     TEALSettingsStatusNew,
@@ -43,7 +43,7 @@ typedef NS_ENUM(NSUInteger, TEALSettingsStatus) {
 
 @property (nonatomic) BOOL useHTTP;
 @property (nonatomic) TEALProfilePollingFrequency pollingFrequency;
-@property (nonatomic) TEALAudienceStreamLogLevel logLevel;
+@property (nonatomic) TEALConnectLogLevel logLevel;
 
 #pragma mark - Mobile Publish Settings
 
@@ -58,7 +58,7 @@ typedef NS_ENUM(NSUInteger, TEALSettingsStatus) {
 
 @property (nonatomic) BOOL shouldSendWifiOnly;
 
-+ (instancetype) settingWithConfiguration:(TEALAudienceStreamConfiguration *)configuration
++ (instancetype) settingWithConfiguration:(TEALConnectConfiguration *)configuration
                                 visitorID:(NSString *)visitorID;
 
 #pragma mark - trace

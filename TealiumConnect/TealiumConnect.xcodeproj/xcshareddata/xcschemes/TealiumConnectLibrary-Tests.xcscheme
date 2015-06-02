@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "37570CCC1B02A6100017B07E"
                BuildableName = "libTEALAudienceStream-Tests.a"
-               BlueprintName = "TEALAudienceStream-Tests"
+               BlueprintName = "TealiumConnect-Tests"
                ReferencedContainer = "container:TEALAudienceStream.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -44,7 +44,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "37570CCC1B02A6100017B07E"
             BuildableName = "libTEALAudienceStream-Tests.a"
-            BlueprintName = "TEALAudienceStream-Tests"
+            BlueprintName = "TealiumConnect-Tests"
             ReferencedContainer = "container:TEALAudienceStream.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -62,7 +62,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "37570CCC1B02A6100017B07E"
             BuildableName = "libTEALAudienceStream-Tests.a"
-            BlueprintName = "TEALAudienceStream-Tests"
+            BlueprintName = "TealiumConnect-Tests"
             ReferencedContainer = "container:TEALAudienceStream.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

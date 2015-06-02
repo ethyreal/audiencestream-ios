@@ -10,13 +10,13 @@
 #import "TEALSystemHelpers.h"
 #import "TEALNetworkHelpers.h"
 #import <TealiumUtilities/NSString+TealiumAdditions.h>
-#import "TEALAudienceStreamConfiguration.h"
+#import "TEALConnectConfiguration.h"
 
 #import "TEALLogger.h"
 
 @implementation TEALSettings
 
-+ (instancetype) settingWithConfiguration:(TEALAudienceStreamConfiguration *)configuration
++ (instancetype) settingWithConfiguration:(TEALConnectConfiguration *)configuration
                                 visitorID:(NSString *)visitorID {
     
     TEALSettings *setting = [[[self class] alloc] init];

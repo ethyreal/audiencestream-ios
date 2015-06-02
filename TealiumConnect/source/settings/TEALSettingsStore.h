@@ -12,7 +12,7 @@
 
 @class TEALSettings;
 @class TEALURLSessionManager;
-@class TEALAudienceStreamConfiguration;
+@class TEALConnectConfiguration;
 @class TEALOperationManager;
 
 
@@ -32,7 +32,7 @@ typedef void (^TEALSettingsCompletionBlock)(TEALSettings *settings, NSError *err
 
 - (instancetype) initWithConfiguration:(id<TEALSettingsStoreConfiguration>)configuration;
 
-- (TEALSettings *) settingsFromConfiguration:(TEALAudienceStreamConfiguration *)configuration visitorID:(NSString *)visitorID;
+- (TEALSettings *) settingsFromConfiguration:(TEALConnectConfiguration *)configuration visitorID:(NSString *)visitorID;
 
 - (void) unarchiveCurrentSettings;
 - (void) archiveCurrentSettings;

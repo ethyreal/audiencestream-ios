@@ -1,12 +1,12 @@
 //
 //  TEALAudienceStream.m
-//  TEALAudienceStream Library
+//  Tealium Connect Library
 //
 //  Created by George Webster on 1/8/15.
 //  Copyright (c) 2015 Tealium Inc. All rights reserved.
 //
 
-#import "TEALAudienceStream.h"
+#import "TealiumConnect.h"
 
 #import "TEALSettingsStore.h"
 #import "TEALAudienceStreamDispatchManager.h"
@@ -48,7 +48,7 @@
 
 #import "TEALAudienceStreamAPIHelpers.h"
 
-@interface TEALAudienceStream () <TEALSettingsStoreConfiguration, TEALAudienceStreamDispatchManagerDelegate, TEALAudienceStreamDispatchManagerConfiguration>
+@interface TealiumConnect () <TEALSettingsStoreConfiguration, TEALAudienceStreamDispatchManagerDelegate, TEALAudienceStreamDispatchManagerConfiguration>
 
 @property (strong, nonatomic) TEALSettingsStore *settingsStore;
 @property (strong, nonatomic) TEALAudienceStreamDispatchManager *dispatchManager;
@@ -68,15 +68,15 @@
 
 @end
 
-@implementation TEALAudienceStream
+@implementation TealiumConnect
 
 + (instancetype) sharedInstance {
     
     static dispatch_once_t onceToken = 0;
-    __strong static TEALAudienceStream *_sharedObject = nil;
+    __strong static TealiumConnect *_sharedObject = nil;
     
     dispatch_once(&onceToken, ^{
-        _sharedObject = [[TEALAudienceStream alloc] initPrivate];
+        _sharedObject = [[TealiumConnect alloc] initPrivate];
     });
     
     return _sharedObject;
@@ -111,16 +111,16 @@
 
 #pragma mark - Enable / Disable / Configure settings / startup
 
-+ (void) enableWithConfiguration:(TEALAudienceStreamConfiguration *)configuration {
++ (void) enableWithConfiguration:(TEALConnectConfiguration *)configuration {
 
     [[self class] enableWithConfiguration:configuration
                                completion:nil];
 }
 
-+ (void) enableWithConfiguration:(TEALAudienceStreamConfiguration *)configuration
++ (void) enableWithConfiguration:(TEALConnectConfiguration *)configuration
                       completion:(TEALBooleanCompletionBlock)completion {
     
-    __weak TEALAudienceStream *instance = [[self class] sharedInstance];
+    __weak TealiumConnect *instance = [[self class] sharedInstance];
     
     [instance.operationManager addOperationWithBlock:^{
         
@@ -131,7 +131,7 @@
     [instance enable];
 }
 
-- (void) setupConfiguration:(TEALAudienceStreamConfiguration *)configuration
+- (void) setupConfiguration:(TEALConnectConfiguration *)configuration
                  completion:(TEALBooleanCompletionBlock)setupCompletion {
 
     
@@ -171,7 +171,7 @@
 - (void) fetchSettings:(TEALSettings *)settings
             completion:(TEALBooleanCompletionBlock)setupCompletion {
     
-    __weak TEALAudienceStream *weakSelf = self;
+    __weak TealiumConnect *weakSelf = self;
     
     TEALSettingsCompletionBlock settingsCompletion = ^(TEALSettings *settings, NSError *error) {
         
@@ -225,7 +225,7 @@
             break;
         case TEALSettingsStatusInvalid:
             TEAL_LogVerbose(@"Invalid Settings library is shutting now.  Please enable with valid configuration.");
-            [TEALAudienceStream disable];
+            [TealiumConnect disable];
             break;
     }
 }
@@ -236,7 +236,7 @@
         return;
     }
     
-    __weak TEALAudienceStream *weakSelf = self;
+    __weak TealiumConnect *weakSelf = self;
     __weak TEALSettings *settings = weakSelf.settingsStore.currentSettings;
     
     weakSelf.urlSessionManager.reachability.reachableBlock = ^(TEALReachabilityManager *reachability) {
@@ -288,7 +288,7 @@
 
 + (void) sendEventWithData:(NSDictionary *)customData {
 
-    __weak TEALAudienceStream *instance = [[self class] sharedInstance];
+    __weak TealiumConnect *instance = [[self class] sharedInstance];
     
     if (!instance.enabled) {
         TEAL_LogVerbose(@"AudienceStream Library Disabled, Ignoring: %s", __PRETTY_FUNCTION__);
@@ -304,7 +304,7 @@
 
 + (void) sendViewWithData:(NSDictionary *)customData {
 
-    __weak TEALAudienceStream *instance = [[self class] sharedInstance];
+    __weak TealiumConnect *instance = [[self class] sharedInstance];
     
     if (!instance.enabled) {
         TEAL_LogVerbose(@"AudienceStream Library Disabled, Ignoring: %s", __PRETTY_FUNCTION__);
@@ -320,7 +320,7 @@
 
 - (void) sendEvent:(TEALEventType)eventType withData:(NSDictionary *)customData {
 
-    __weak TEALAudienceStream *weakSelf = self;
+    __weak TealiumConnect *weakSelf = self;
     
     TEALDispatchBlock completion = ^(TEALDispatchStatus status, TEALDispatch *dispatch, NSError *error) {
         
@@ -350,7 +350,7 @@
 
 - (void) dispatchManager:(TEALAudienceStreamDispatchManager *)dispatchManager didProcessDispatch:(TEALDispatch *)dispatch status:(TEALDispatchStatus)status {
 
-    if (self.settingsStore.currentSettings.logLevel >= TEALAudienceStreamLogLevelVerbose) {
+    if (self.settingsStore.currentSettings.logLevel >= TEALConnectLogLevelVerbose) {
 
         NSString *statusString = @"sent";
         
@@ -424,7 +424,7 @@
 
 + (void) fetchVisitorProfileWithCompletion:(void (^)(TEALVisitorProfile *profile, NSError *error))completion {
 
-    __weak TEALAudienceStream *instance = [[self class] sharedInstance];
+    __weak TealiumConnect *instance = [[self class] sharedInstance];
     
     if (!instance.enabled) {
         TEAL_LogVerbose(@"AudienceStream Library Disabled, Ignoring: %s", __func__);
@@ -439,7 +439,7 @@
 
 - (void) fetchProfileWithCompletion:(void (^)(TEALVisitorProfile *profile, NSError *error))completion {
 
-    __weak TEALAudienceStream *weakSelf = self;
+    __weak TealiumConnect *weakSelf = self;
 
     if (!self.enabled) {
         return; // No fail log because these they should be logged once for each public method
@@ -464,7 +464,7 @@
 
 + (TEALVisitorProfile *) cachedVisitorProfileCopy {
 
-    TEALAudienceStream *instance = [self sharedInstance];
+    TealiumConnect *instance = [self sharedInstance];
 
     @synchronized(instance) {
 
@@ -476,7 +476,7 @@
 
 + (NSString *) visitorID {
 
-    TEALAudienceStream *instance = [self sharedInstance];
+    TealiumConnect *instance = [self sharedInstance];
 
     @synchronized(instance) {
         
@@ -489,7 +489,7 @@
 
 + (void) joinTraceWithToken:(NSString *)token {
 
-    __weak TEALAudienceStream *instance = [[self class] sharedInstance];
+    __weak TealiumConnect *instance = [[self class] sharedInstance];
 
     [instance.operationManager addOperationWithBlock:^{
         [instance joinTraceWithToken:token];
@@ -512,7 +512,7 @@
 
 + (void) leaveTrace {
 
-    __weak TEALAudienceStream *instance = [[self class] sharedInstance];
+    __weak TealiumConnect *instance = [[self class] sharedInstance];
 
     [instance.operationManager addOperationWithBlock:^{
         [instance leaveTrace];

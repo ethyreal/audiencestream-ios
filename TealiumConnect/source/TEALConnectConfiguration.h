@@ -1,6 +1,6 @@
 //
-//  TEALAudienceStreamConfiguration.h
-//  TEALAudienceStream Library
+//  TEALConnectConfiguration.h
+//  Tealium Connect Library
 //
 //  Created by George Webster on 3/2/15.
 //  Copyright (c) 2015 Tealium Inc. All rights reserved.
@@ -15,15 +15,15 @@ typedef NS_ENUM(NSUInteger, TEALProfilePollingFrequency) {
     TEALProfilePollingFrequencyAfterEveryEvent
 };
 
-typedef NS_ENUM(NSUInteger, TEALAudienceStreamLogLevel) {
-    TEALAudienceStreamLogLevelNone = 1,
-    TEALAudienceStreamLogLevelNormal,
-    TEALAudienceStreamLogLevelVerbose,
-    TEALAudienceStreamLogLevelExtremeVerbosity
+typedef NS_ENUM(NSUInteger, TEALConnectLogLevel) {
+    TEALConnectLogLevelNone = 1,
+    TEALConnectLogLevelNormal,
+    TEALConnectLogLevelVerbose,
+    TEALConnectLogLevelExtremeVerbosity
 };
 
 
-@interface TEALAudienceStreamConfiguration : NSObject
+@interface TEALConnectConfiguration : NSObject
 
 @property (copy, nonatomic) NSString *accountName;
 @property (copy, nonatomic) NSString *profileName;
@@ -31,7 +31,7 @@ typedef NS_ENUM(NSUInteger, TEALAudienceStreamLogLevel) {
 
 @property (nonatomic) BOOL useHTTP;
 @property (nonatomic) TEALProfilePollingFrequency pollingFrequency;
-@property (nonatomic) TEALAudienceStreamLogLevel logLevel;
+@property (nonatomic) TEALConnectLogLevel logLevel;
 
 @property (copy, nonatomic) NSString *audienceStreamProfile;
 

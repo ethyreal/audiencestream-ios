@@ -1,6 +1,6 @@
 //
 //  TEALAudienceStream.h
-//  TEALAudienceStream Library
+//  Tealium Connect Library
 //
 //  Created by George Webster on 1/8/15.
 //  Copyright (c) 2015 Tealium Inc. All rights reserved.
@@ -9,12 +9,12 @@
 
 #import <Foundation/Foundation.h>
 #import "TEALVisitorProfile.h"
-#import "TEALAudienceStreamConfiguration.h"
+#import "TEALConnectConfiguration.h"
 #import <TealiumUtilities/TEALBlocks.h>
 #import "TEALEvent.h"
 
 
-@interface TEALAudienceStream : NSObject
+@interface TealiumConnect : NSObject
 
 # pragma mark - Setup / Configuration
 
@@ -23,7 +23,7 @@
  *
  *  @param configuration TEALAudienceStreamConfiguration instance with valid Account/Profile/Enviroment properties.
  */
-+ (void) enableWithConfiguration:(TEALAudienceStreamConfiguration *)configuration;
++ (void) enableWithConfiguration:(TEALConnectConfiguration *)configuration;
 
 /**
  *  Starts the AudienceStream Library with the given configuration object.
@@ -31,7 +31,7 @@
  *  @param configuration TEALAudienceStreamConfiguration instance with valid Account/Profile/Enviroment properties.
  *  @param completion    TEALBooleanCompletionBlock which is called after settings have loaded and visitorID has been created or restored.
  */
-+ (void) enableWithConfiguration:(TEALAudienceStreamConfiguration *)configuration
++ (void) enableWithConfiguration:(TEALConnectConfiguration *)configuration
                       completion:(TEALBooleanCompletionBlock)completion;
 
 /**

@@ -17,7 +17,7 @@
 
 @interface TEALAudienceStream_Tests : XCTestCase
 
-@property (strong) TEALAudienceStream *audienceStream;
+@property (strong) TealiumConnect *audienceStream;
 @property TEALAudienceStreamConfiguration *configuration;
 @end
 
@@ -26,7 +26,7 @@
 - (void) setUp {
     [super setUp];
     
-    self.audienceStream = [[TEALAudienceStream alloc] initPrivate];
+    self.audienceStream = [[TealiumConnect alloc] initPrivate];
 
     self.configuration = [TEALAudienceStreamConfiguration configurationWithAccount:@"tealiummobile"
                                                                            profile:@"demo"
@@ -44,7 +44,7 @@
 
 - (void) tearDown {
 
-    [TEALAudienceStream disable];
+    [TealiumConnect disable];
     self.audienceStream = nil;
     
     [super tearDown];

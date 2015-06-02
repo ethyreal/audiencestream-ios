@@ -11,7 +11,7 @@
 #import "TEALNetworkHelpers.h"
 #import "TEALOperationManager.h"
 #import "TEALURLSessionManager.h"
-#import "TEALAudienceStreamConfiguration.h"
+#import "TEALConnectConfiguration.h"
 #import "TEALAudienceStreamDatasources.h"
 #import "TEALError.h"
 #import "TEALLogger.h"
@@ -41,7 +41,7 @@ static NSString * const kTEALAudienceStreamSettingsStorageKey = @"com.tealium.au
 
 #pragma mark - Settings Creation / Persistance
 
-- (TEALSettings *) settingsFromConfiguration:(TEALAudienceStreamConfiguration *)configuration visitorID:(NSString *)visitorID {
+- (TEALSettings *) settingsFromConfiguration:(TEALConnectConfiguration *)configuration visitorID:(NSString *)visitorID {
 
     if (!configuration.accountName) {
         return nil;

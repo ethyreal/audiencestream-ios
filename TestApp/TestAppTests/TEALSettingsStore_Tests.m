@@ -22,7 +22,7 @@
 @property (strong, nonatomic) TEALOperationManager *operationManager;
 @property (strong, nonatomic) TEALURLSessionManager *urlSessionManager;
 
-@property (strong, nonatomic) TEALAudienceStreamConfiguration *configuration;
+@property (strong, nonatomic) TEALConnectConfiguration *configuration;
 
 @end
 
@@ -39,7 +39,7 @@
 
     self.settingsStore = [[TEALSettingsStore alloc] initWithConfiguration:self];
 
-    self.configuration = [TEALAudienceStreamConfiguration configurationWithAccount:@"tealiummobile"
+    self.configuration = [TEALConnectConfiguration configurationWithAccount:@"tealiummobile"
                                                                            profile:@"demo"
                                                                        environment:@"dev"];
 

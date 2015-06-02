@@ -1,6 +1,6 @@
 //
 //  TEALError.h
-//  TEALAudienceStream Library
+//  Tealium Connect Library
 //
 //  Created by George Webster on 3/16/15.
 //  Copyright (c) 2015 Tealium Inc. All rights reserved.

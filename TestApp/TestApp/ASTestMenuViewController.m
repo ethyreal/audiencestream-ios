@@ -7,8 +7,7 @@
 //
 
 #import "ASTestMenuViewController.h"
-
-#import <TEALAudienceStream/TEALAudienceStream.h>
+#import <TealiumConnectLibrary/TealiumConnect.h>
 
 typedef NS_ENUM(NSUInteger, ASTestMenuItem) {
     ASTestMenuItemSendEventLink = 0,
@@ -100,19 +99,19 @@ typedef NS_ENUM(NSUInteger, ASTestMenuItem) {
     
     NSDictionary *data = @{ @"event_name" : @"m_view"};
     
-    [TEALAudienceStream sendViewWithData:data];
+    [TealiumConnect sendViewWithData:data];
 }
 
 - (void) sendAudienceStreamLinkEvent {
     
     NSDictionary *data = @{ @"event_name" : @"m_link"};
     
-    [TEALAudienceStream sendEventWithData:data];
+    [TealiumConnect sendEventWithData:data];
 }
 
 - (void) fetchAudienceStreamProfile {
     
-    [TEALAudienceStream fetchVisitorProfileWithCompletion:^(TEALVisitorProfile *profile, NSError *error) {
+    [TealiumConnect fetchVisitorProfileWithCompletion:^(TEALVisitorProfile *profile, NSError *error) {
        
         if (error) {
             NSLog(@"test app failed to receive profile with error: %@", [error localizedDescription]);
@@ -125,7 +124,7 @@ typedef NS_ENUM(NSUInteger, ASTestMenuItem) {
 
 - (void) accessLastLoadedAudienceStreamProfile {
 
-    TEALVisitorProfile *profile = [TEALAudienceStream cachedVisitorProfileCopy];
+    TEALVisitorProfile *profile = [TealiumConnect cachedVisitorProfileCopy];
 
     if (profile) {
         NSLog(@"last loaded profile: %@", profile);
@@ -140,11 +139,11 @@ typedef NS_ENUM(NSUInteger, ASTestMenuItem) {
 
 - (void) joinTraceWithToken:(NSString *)token {
     
-    [TEALAudienceStream joinTraceWithToken:token];
+    [TealiumConnect joinTraceWithToken:token];
 }
 
 - (void) leaveTrace {
-    [TEALAudienceStream leaveTrace];
+    [TealiumConnect leaveTrace];
 }
 
 @end
